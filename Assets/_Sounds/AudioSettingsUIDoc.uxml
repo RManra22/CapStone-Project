@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; align-items: stretch; justify-content: center; align-self: center; background-color: rgba(58, 121, 187, 0); width: 50%; height: 50%; flex-direction: row;">
+        <ui:VisualElement style="flex-grow: 1; background-color: rgb(217, 217, 217); align-self: center; height: auto;">
+            <ui:Label text="Settings" name="labelSettingsTitle" style="-unity-text-align: upper-center; font-size: 37px;" />
+            <ui:VisualElement name="SettingsContent" style="flex-grow: 1;">
+                <ui:Label text="Volume" name="labelVolume" style="font-size: 26px;" />
+                <ui:Slider label="Master" value="42" high-value="100" name="sliderMaster" style="font-size: 21px;" />
+                <ui:Slider label="Music" value="42" high-value="100" name="sliderMusic" style="font-size: 21px;" />
+                <ui:Slider label="Sound Effects" value="42" high-value="100" name="sliderSFX" style="font-size: 21px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
