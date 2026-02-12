@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
     if (isAlive && isAccelerating) {
       // Increase velocity upto a maximum.
       shipRigidbody.AddForce(shipAcceleration * transform.up);
-      shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVelocity);
+      shipRigidbody.velocity = Vector2.ClampMagnitude(shipRigidbody.velocity, shipMaxVelocity);
     }
   }
 
@@ -68,7 +68,7 @@ public class Player : MonoBehaviour {
       Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
 
       // Inherit velicity only in the forward direction of ship.
-      Vector2 shipVelocity = shipRigidbody.linearVelocity;
+      Vector2 shipVelocity = shipRigidbody.velocity;
       Vector2 shipDirection = transform.up;
       float shipForwardSpeed = Vector2.Dot(shipVelocity, shipDirection);
 
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour {
         shipForwardSpeed = 0; 
       }
 
-      bullet.linearVelocity = shipDirection * shipForwardSpeed;
+      bullet.velocity = shipDirection * shipForwardSpeed;
 
       // Add force to propel bullet in direction the player is facing.
       bullet.AddForce(bulletSpeed * transform.up, ForceMode2D.Impulse);
