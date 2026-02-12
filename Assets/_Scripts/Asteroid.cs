@@ -1,7 +1,10 @@
 using UnityEngine;
 
+// This script is responsible for the behaviour of the asteroids in the game.
 public class Asteroid : MonoBehaviour {
+  // The particle system to spawn when the asteroid is destroyed.
   [SerializeField] private ParticleSystem destroyedParticles;
+  // The size of the asteroid, larger asteroids are slower and spawn smaller asteroids when destroyed.
   public int size = 3;
 
   public GameManager gameManager;

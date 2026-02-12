@@ -1,11 +1,20 @@
 using System.Collections;
 using UnityEngine;
 
+// This script is responsible for the behaviour of the player in the game.
 public class Player : MonoBehaviour {
   [Header("Ship parameters")]
+  // The acceleration applied to the ship when the up arrow is held down.
   [SerializeField] private float shipAcceleration = 10f;
+
+
+  // The maximum velocity the ship can reach.
   [SerializeField] private float shipMaxVelocity = 10f;
+
+  // The rotation speed of the ship when left or right arrows are held down.
   [SerializeField] private float shipRotationSpeed = 180f;
+
+  // The speed at which bullets are fired when space is pressed.
   [SerializeField] private float bulletSpeed = 8f;
 
   [Header("Object references")]

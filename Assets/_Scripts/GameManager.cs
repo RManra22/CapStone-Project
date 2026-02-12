@@ -2,11 +2,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// This script is responsible for managing the overall game state, including spawning asteroids and handling game over conditions.
 public class GameManager : MonoBehaviour {
   [SerializeField] private Asteroid asteroidPrefab;
   
+  // The number of asteroids currently in the game. When this reaches 0, we spawn more.
   public int asteroidCount = 0;
 
+  // The current level, which determines how many asteroids to spawn. Increases each time all asteroids are destroyed.
   private int level = 0;
 
   private void Update() {
