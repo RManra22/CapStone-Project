@@ -29,6 +29,9 @@ public class Asteroid : MonoBehaviour {
       // Register the destruction with the game manager.
       gameManager.asteroidCount--;
 
+      // Adds score when an asteroid is destroyed
+      gameManager.AddScore(size);
+
       // Destroy the bullet so it doesn't carry on and hit more things.
       Destroy(collision.gameObject);
 
