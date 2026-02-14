@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
-public class MainMenuManager : MonoBehaviour
+public class ButtonManager : MonoBehaviour
 {
     // This script is responsible for allowing the player to navigate the menus as per the functional requirements. 
     public void LoadScene(string sceneName) // load the correct scene based on the name given
@@ -15,10 +15,9 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    /* This script is responsible for allowing the player to pause and unpause the game as per the functional requirements.
-    public void UnpauseGame() // unpause the game from the pause menu
+    // This script is responsible for allowing the player to unpause the game as per the functional requirements.
+    public void UnpauseGame()
     {
         GameManager.Instance.ResumeGame();
     }
-    */
 }

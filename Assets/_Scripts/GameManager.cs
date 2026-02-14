@@ -1,8 +1,10 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
+  public static GameManager Instance { get; private set; }
   [SerializeField] private Asteroid asteroidPrefab;
   
   public int asteroidCount = 0;
@@ -12,6 +14,13 @@ public class GameManager : MonoBehaviour {
   public int currentScore = 0;
   public int highScore = 0;
   
+  // Pause state
+  public bool isPaused = false;
+
+  // UI stuff
+  [SerializeField] private GameObject pauseMenuUI;
+  [SerializeField] private GameObject inGameUI;
+  
   // Points awarded based on asteroid size
   [SerializeField] private int largeAsteroidPoints = 20;
   [SerializeField] private int mediumAsteroidPoints = 50;
@@ -20,6 +29,7 @@ public class GameManager : MonoBehaviour {
   private void Start() {
     // Load the high score from PlayerPrefs
     highScore = PlayerPrefs.GetInt("HighScore", 0);
+    Instance = this;
   }
 
   private void Update() {
@@ -28,6 +38,15 @@ public class GameManager : MonoBehaviour {
       int numAsteroids = 2 + (2 * level);
       for (int i = 0; i < numAsteroids; i++) {
         SpawnAsteroid();
+      }
+    }
+
+    // Toggle pause on Escape key press
+    if (Input.GetKeyDown(KeyCode.Escape)) {
+      if (isPaused) {
+        ResumeGame();
+      } else {
+        PauseGame(); 
       }
     }
   }
@@ -89,5 +108,27 @@ public class GameManager : MonoBehaviour {
     yield return new WaitForSeconds(2f);
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     yield return null;
+  }
+
+  public void PauseGame()
+  {
+    isPaused = true;
+    Time.timeScale = 0f;
+    inGameUI.SetActive(false);
+    pauseMenuUI.SetActive(true);
+    Cursor.lockState = CursorLockMode.None;
+    Cursor.visible = true;
+    
+  }
+
+  public void ResumeGame()
+  {
+    isPaused = false;
+    Time.timeScale = 1f;
+    pauseMenuUI.SetActive(false);
+    inGameUI.SetActive(true);
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
+    
   }
 }

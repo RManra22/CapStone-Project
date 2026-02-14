@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/GameModes.unity
     guid: 7c920badfea81714e909e380082ccd43
   - enabled: 1
+    path: Assets/_Scenes/SampleScene.unity
+    guid: 934dadab6e679114b8ebf39865ccf447
+  - enabled: 1
     path: Assets/_Scenes/GameMode2.unity
     guid: c85f769dcdbb4454dabc21f33f83c57a
   - enabled: 1
