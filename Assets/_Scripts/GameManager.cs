@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
   public int highScore = 0;
   
   // Pause state
-  public bool isPaused = false;
+  public bool isPaused;
 
   // UI stuff
   [SerializeField] private GameObject pauseMenuUI;
@@ -26,10 +26,13 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private int mediumAsteroidPoints = 50;
   [SerializeField] private int smallAsteroidPoints = 100;
 
+  void Awake() {
+    Instance = this;
+    Time.timeScale = 1f; // Makes the game starts unpaused
+  }
   private void Start() {
     // Load the high score from PlayerPrefs
     highScore = PlayerPrefs.GetInt("HighScore", 0);
-    Instance = this;
   }
 
   private void Update() {
