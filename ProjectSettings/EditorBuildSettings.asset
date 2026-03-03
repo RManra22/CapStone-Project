@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Settings.unity
     guid: cece83d656f61804a8f5dc35097681bd
   - enabled: 1
+    path: Assets/_Scenes/KeyBinds.unity
+    guid: 9b3792d66f4be7c4ba5e93ce230c9f55
+  - enabled: 1
     path: Assets/_Scenes/GameModes.unity
     guid: 7c920badfea81714e909e380082ccd43
   - enabled: 1

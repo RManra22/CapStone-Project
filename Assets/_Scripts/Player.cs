@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 // This script is responsible for the behaviour of the player in the game.
 public class Player : MonoBehaviour {
@@ -23,12 +24,14 @@ public class Player : MonoBehaviour {
   [SerializeField] private Rigidbody2D bulletPrefab;
   [SerializeField] private ParticleSystem destroyedParticles;
 
+  private PlayerInput playerInput;
   private Rigidbody2D shipRigidbody;
   private bool isAlive = true;
   private bool isAccelerating = false;
 
   private void Start() {
     shipRigidbody = GetComponent<Rigidbody2D>();
+    playerInput = GetComponent<PlayerInput>();
     // Ensure we always start with a valid shooting style
     if (currentShootingStyle < 1 || currentShootingStyle > 3)
       currentShootingStyle = 1;
@@ -51,13 +54,13 @@ public class Player : MonoBehaviour {
   }
 
   private void HandleShipAcceleration() {
-    isAccelerating = Input.GetKey(KeyCode.UpArrow);
+    isAccelerating = playerInput.actions["Accel"].ReadValue<Vector2>().y > 0;
   }
 
   private void HandleShipRotation() {
-    if (Input.GetKey(KeyCode.LeftArrow)) {
+    if (playerInput.actions["TurnLeft"].ReadValue<Vector2>().x < 0) {
       transform.Rotate(shipRotationSpeed * Time.deltaTime * transform.forward);
-    } else if (Input.GetKey(KeyCode.RightArrow)) {
+    } else if (playerInput.actions["TurnRight"].ReadValue<Vector2>().x > 0) {
       transform.Rotate(-shipRotationSpeed * Time.deltaTime * transform.forward);
     }
   }
@@ -92,7 +95,7 @@ public class Player : MonoBehaviour {
 
   // Handles shooting based on the current shooting style and fire rate.
   private void HandleShooting() {
-    if (!Input.GetKey(KeyCode.Space) || Time.time < nextFireTime)
+    if (!playerInput.actions["Shoot"].triggered || Time.time < nextFireTime)
       return;
 
     switch (currentShootingStyle) {
