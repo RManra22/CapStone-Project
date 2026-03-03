@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
   public static GameManager Instance { get; private set; }
   [SerializeField] private Asteroid asteroidPrefab;
+  [SerializeField] private Boss bossPrefab;
   
   public int asteroidCount = 0;
   private int level = 0;
+  private int bossesDefeated = 0; // Track how many bosses have been defeated to scale difficulty
   
   // SCORE SYSTEM
   public int currentScore = 0;
@@ -35,13 +37,22 @@ public class GameManager : MonoBehaviour {
     highScore = PlayerPrefs.GetInt("HighScore", 0);
   }
 
+
+  // Main game loop - checks if all asteroids are destroyed to spawn the next wave or boss
   private void Update() {
     if (asteroidCount == 0) {
-      level++;
-      int numAsteroids = 2 + (2 * level);
-      for (int i = 0; i < numAsteroids; i++) {
-        SpawnAsteroid();
-      }
+        level++;
+
+        if (level % 1 == 0) { // change to level % 1 == 0 for testing - every level is a boss level
+            // Boss level!
+            SpawnBoss();
+        } else {
+            // Normal wave
+            int numAsteroids = level;
+            for (int i = 0; i < numAsteroids; i++) {
+                SpawnAsteroid();
+            }
+        }
     }
 
     // Toggle pause on Escape key press
@@ -53,12 +64,37 @@ public class GameManager : MonoBehaviour {
       }
     }
   }
+  private void SpawnBoss() {
+    float offset = Random.Range(0f, 1f);
+    Vector2 viewportSpawnPosition = Vector2.zero;
+
+    int edge = Random.Range(0, 4);
+    if (edge == 0) {
+        viewportSpawnPosition = new Vector2(offset, 0);
+    } else if (edge == 1) {
+        viewportSpawnPosition = new Vector2(offset, 1);
+    } else if (edge == 2) {
+        viewportSpawnPosition = new Vector2(0, offset);
+    } else if (edge == 3) {
+        viewportSpawnPosition = new Vector2(1, offset);
+    }
+
+    Vector2 worldSpawnPosition = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
+    Boss boss = Instantiate(bossPrefab, worldSpawnPosition, Quaternion.identity);
+    int tier = Mathf.Min(bossesDefeated + 1, 3); // caps at 3
+    boss.SetTier(tier);
+}
+
+// Track how many bosses have been defeated to scale difficulty
+  public void OnBossDefeated() {
+      bossesDefeated++;
+  }
 
   private void SpawnAsteroid() {
     float offset = Random.Range(0f, 1f);
     Vector2 viewportSpawnPosition = Vector2.zero;
 
-    int edge = Random.Range(0, 4);
+    int edge = Random.Range(0,  4);
     if (edge == 0) {
       viewportSpawnPosition = new Vector2(offset, 0);
     } else if (edge == 1) {
@@ -74,7 +110,7 @@ public class GameManager : MonoBehaviour {
     asteroid.gameManager = this;
   }
 
-  // NEW METHOD: Add points based on asteroid size
+  // Add points based on asteroid size
   public void AddScore(int asteroidSize) {
     int points = 0;
     

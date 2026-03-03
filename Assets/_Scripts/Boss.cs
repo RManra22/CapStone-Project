@@ -1,0 +1,241 @@
+using System.Collections;
+using UnityEngine;
+
+// Boss enemy with multiple attack patterns and phases.
+public class Boss : MonoBehaviour {
+
+  [Header("References")]
+  [SerializeField] private Rigidbody2D bulletPrefab;       // Reuse the same bullet prefab as the player
+  [SerializeField] private Transform bulletSpawn;           // Empty child object at the front of the boss
+  [SerializeField] private ParticleSystem destroyedParticles;
+  [SerializeField] private Asteroid asteroidPrefab;         // For the asteroid-spawn attack
+
+  [Header("Health")]
+  [SerializeField] private int maxHealth = 15;
+  private int currentHealth;
+
+  [Header("Movement")]
+  [SerializeField] private float driftSpeed = 1.5f;         // Phase 1 drift speed
+  [SerializeField] private float chaseSpeed = 3.5f;         // Phase 2 chase force
+  [SerializeField] private float enragedSpeed = 5.5f;       // Phase 3 chase force
+  [SerializeField] private float maxVelocity = 5f;
+  [SerializeField] private float rotationSpeed = 90f;
+
+  [Header("Attack - Bullet")]
+  [SerializeField] private float bulletSpeed = 5f;
+  [SerializeField] private float singleShotInterval = 2f;
+  [SerializeField] private float spreadShotInterval = 3f;
+  [SerializeField] private float spiralShotInterval = 0.1f;
+
+  [Header("Attack - Asteroid Spawn")]
+  [SerializeField] private float asteroidSpawnInterval = 6f;
+  [SerializeField] private int asteroidsToSpawn = 3;
+
+  private enum BossState { Drifting, Chasing, Enraged }
+  private BossState state = BossState.Drifting;
+
+  private Rigidbody2D rb;
+  private Transform player;
+  private GameManager gameManager;
+  private bool isAlive = true;
+
+  private float nextSingleShotTime;
+  private float nextSpreadShotTime;
+  private float nextAsteroidSpawnTime;
+  private bool spiralRunning = false;
+
+
+private int tier = 1; // Default to tier 1, will be set by GameManager on spawn
+public void SetTier(int tier) {
+    tier = tier = Mathf.Clamp(tier, 1, 3); // Ensure tier is between 1 and 3
+    switch (tier) {
+        case 1:
+            maxHealth = 5;
+            // only aimed shot — no spread, no spiral
+            asteroidSpawnInterval = Mathf.Infinity;
+            break;
+
+        case 2:
+            maxHealth = 10;
+            // aimed + spread + asteroid spawning
+            spreadShotInterval = 3f;
+            asteroidSpawnInterval = 6f;
+            // still no spiral
+            break;
+
+        case 3:
+            maxHealth = 10;
+            // everything unlocked, faster and more aggressive
+            spreadShotInterval = 2f;
+            asteroidSpawnInterval = 4f;
+            chaseSpeed = 5f;
+            enragedSpeed = 8f;
+            asteroidsToSpawn = 5;
+            break;
+    }
+    }
+
+  private void Start() {
+    rb = GetComponent<Rigidbody2D>();
+    gameManager = FindAnyObjectByType<GameManager>();
+
+    Player playerObj = FindAnyObjectByType<Player>();
+    if (playerObj != null) player = playerObj.transform;
+
+    currentHealth = maxHealth;
+
+    Vector2 randomDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+    rb.AddForce(randomDir * driftSpeed, ForceMode2D.Impulse);
+
+    // Stagger attack timers
+    nextSingleShotTime = Time.time + 1f;
+    nextSpreadShotTime = Time.time + 2.5f;
+    nextAsteroidSpawnTime = Time.time + 4f;
+
+    gameManager.asteroidCount++;
+  }
+
+  private void Update() {
+    if (!isAlive) return;
+    UpdateState();
+    HandleAttacks();
+  }
+
+  private void FixedUpdate() {
+    if (!isAlive || player == null) return;
+
+    rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxVelocity);
+
+    // Rotate toward player
+    Vector2 dirToPlayer = (player.position - transform.position).normalized;
+    float angle = Mathf.Atan2(dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg - 90f;
+    float newAngle = Mathf.MoveTowardsAngle(rb.rotation, angle, rotationSpeed * Time.fixedDeltaTime);
+    rb.MoveRotation(newAngle);
+
+    if (state == BossState.Chasing) {
+      rb.AddForce(dirToPlayer * chaseSpeed);
+    } else if (state == BossState.Enraged) {
+      rb.AddForce(dirToPlayer * enragedSpeed);
+    }
+  }
+
+  private void UpdateState() {
+    float healthPercent = (float)currentHealth / maxHealth;
+    if (healthPercent <= 0.33f)       state = BossState.Enraged;
+    else if (healthPercent <= 0.66f)  state = BossState.Chasing;
+    else                              state = BossState.Drifting;
+  }
+
+  private void HandleAttacks() {
+    // Single aimed shot — all phases
+    if (Time.time >= nextSingleShotTime) {
+      ShootAtPlayer();
+      nextSingleShotTime = Time.time + singleShotInterval;
+    }
+
+    // Spread shot — phase 2+
+    if (state != BossState.Drifting && Time.time >= nextSpreadShotTime) {
+      ShootSpread();
+      nextSpreadShotTime = Time.time + spreadShotInterval;
+    }
+
+    // Spiral — enraged only
+    if (state == BossState.Enraged && !spiralRunning) {
+      StartCoroutine(ShootSpiral());
+    }
+
+    // Asteroid spawn — all phases
+    if (Time.time >= nextAsteroidSpawnTime) {
+      SpawnAsteroids();
+      nextAsteroidSpawnTime = Time.time + asteroidSpawnInterval;
+    }
+  }
+
+  private void ShootAtPlayer() {
+    if (player == null) return;
+    Vector2 dir = (player.position - transform.position).normalized;
+    FireBullet(dir);
+  }
+
+  private void ShootSpread() {
+    int bulletCount = 5;
+    float angleStep = 20f;
+    float startAngle = -((bulletCount - 1) / 2f) * angleStep;
+    for (int i = 0; i < bulletCount; i++) {
+      FireBullet(Rotate2D(transform.up, startAngle + i * angleStep));
+    }
+  }
+
+  private IEnumerator ShootSpiral() {
+    spiralRunning = true;
+    int totalBullets = 16;
+    float angleStep = 360f / totalBullets;
+    for (int i = 0; i < totalBullets; i++) {
+      if (!isAlive) break;
+      FireBullet(Rotate2D(Vector2.up, i * angleStep));
+      yield return new WaitForSeconds(spiralShotInterval);
+    }
+    yield return new WaitForSeconds(4f);
+    spiralRunning = false;
+  }
+
+  private void SpawnAsteroids() {
+    for (int i = 0; i < asteroidsToSpawn; i++) {
+      Vector2 offset = Random.insideUnitCircle.normalized * 2f;
+      Asteroid a = Instantiate(asteroidPrefab, (Vector2)transform.position + offset, Quaternion.identity);
+      a.size = 1;
+      a.gameManager = gameManager;
+    }
+  }
+
+  private void FireBullet(Vector2 direction) {
+    if (bulletSpawn == null) return;
+    Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
+    bullet.gameObject.layer = LayerMask.NameToLayer("BossBullet");
+    bullet.gameObject.tag = "BossBullet";
+    bullet.AddForce(direction.normalized * bulletSpeed, ForceMode2D.Impulse);
+}
+
+  private void OnTriggerEnter2D(Collider2D collision) {
+    if (!isAlive) return;
+    if (collision.CompareTag("Bullet")) {
+      Destroy(collision.gameObject);
+      TakeDamage(1);
+    }
+  }
+
+  private void TakeDamage(int amount) {
+    currentHealth -= amount;
+    StartCoroutine(FlashOnHit());
+    if (currentHealth <= 0) Die();
+  }
+
+  private IEnumerator FlashOnHit() {
+    SpriteRenderer sr = GetComponent<SpriteRenderer>();
+    if (sr == null) yield break;
+    Color original = sr.color;
+    sr.color = Color.red;
+    yield return new WaitForSeconds(0.08f);
+    if (sr != null) sr.color = original;
+  }
+
+  private void Die() {
+    isAlive = false;
+    gameManager.asteroidCount--;
+    gameManager.OnBossDefeated();
+
+    // Award points based on tier
+    int bossPoints = tier == 1 ? 500 : tier == 2 ? 1000 : 1500;
+    gameManager.currentScore += bossPoints;
+
+    Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+    Destroy(gameObject);
+}
+
+  private Vector2 Rotate2D(Vector2 vector, float degrees) {
+    float radians = degrees * Mathf.Deg2Rad;
+    float cos = Mathf.Cos(radians);
+    float sin = Mathf.Sin(radians);
+    return new Vector2(vector.x * cos - vector.y * sin, vector.x * sin + vector.y * cos);
+  }
+}

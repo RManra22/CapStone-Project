@@ -69,7 +69,7 @@ public class Player : MonoBehaviour {
     // Press 'Q' to cycle through shooting styles
     if (Input.GetKeyDown(KeyCode.Q)) {
       currentShootingStyle++;
-      if (currentShootingStyle > 3) {  // Changed from 4 to 3
+      if (currentShootingStyle > 3) {
         currentShootingStyle = 1;
       }
       Debug.Log("Shooting Style: " + GetShootingStyleName());
@@ -183,7 +183,7 @@ public class Player : MonoBehaviour {
   }
 
   private void OnTriggerEnter2D(Collider2D collision) {
-    if (collision.CompareTag("Asteroid")) {
+    if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet")) {
       isAlive = false;
 
       GameManager gameManager = FindAnyObjectByType<GameManager>();
