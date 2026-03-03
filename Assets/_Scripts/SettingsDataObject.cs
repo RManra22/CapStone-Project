@@ -1,6 +1,3 @@
-/*
-    This script was provided to us by Professor Eric May.
-*/
 using UnityEngine;
 [CreateAssetMenu(fileName = "SettingsData")]
 public class SettingsDataObject : ScriptableObject
