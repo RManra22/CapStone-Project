@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Bullet
   - Asteroid
+  - BossBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BossBullet
   - Water
   - UI
   - 

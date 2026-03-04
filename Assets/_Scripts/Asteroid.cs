@@ -24,32 +24,28 @@ public class Asteroid : MonoBehaviour {
   }
 
   private void OnTriggerEnter2D(Collider2D collision) {
-    // Asteroids are only destroyed with bullets.
     if (collision.CompareTag("Bullet")) {
-      // Register the destruction with the game manager.
-      gameManager.asteroidCount--;
+        gameManager.asteroidCount--;
+        gameManager.AddScore(size);
 
-      // Adds score when an asteroid is destroyed
-      gameManager.AddScore(size);
+        // Disable immediately instead of Destroy so it can't hit children
+        collision.gameObject.SetActive(false);
+        Destroy(collision.gameObject, 0.1f); // clean up shortly after
 
-      // Destroy the bullet so it doesn't carry on and hit more things.
-      Destroy(collision.gameObject);
 
-      // If size > 1 spawn 2 smaller asteroids of size-1.
-      if (size > 1) {
-        for (int i = 0; i < 2; i++) {
-          Asteroid newAsteroid = Instantiate(this, transform.position, Quaternion.identity);
-          newAsteroid.size = size - 1;
-          newAsteroid.gameManager = gameManager;
+        // If the asteroid is large enough, spawn two smaller asteroids and have an offset for its spawn.
+        if (size > 2) {
+            for (int i = 0; i < 2; i++) {
+                Vector2 offset = Random.insideUnitCircle.normalized * 0.5f;
+                Asteroid newAsteroid = Instantiate(this, (Vector2)transform.position + offset, Quaternion.identity);
+                newAsteroid.size = size - 1;
+                newAsteroid.gameManager = gameManager;
+            }
         }
-      }
 
-      // Spawn particles on destruction.
-      Instantiate(destroyedParticles, transform.position, Quaternion.identity);
-
-      // Destroy this asteroid.
-      Destroy(gameObject);
+        Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
-  }
+}
 }
 

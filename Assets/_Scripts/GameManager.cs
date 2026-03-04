@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
   public static GameManager Instance { get; private set; }
@@ -10,7 +11,7 @@ public class GameManager : MonoBehaviour {
   
   public int asteroidCount = 0;
   private int level = 0;
-  private int bossesDefeated = 0; // Track how many bosses have been defeated to scale difficulty
+  private int bossesDefeated = 0;
   
   // SCORE SYSTEM
   public int currentScore = 0;
@@ -18,10 +19,14 @@ public class GameManager : MonoBehaviour {
   
   // Pause state
   public bool isPaused;
+  private bool isTransitioning = false;
 
   // UI stuff
   [SerializeField] private GameObject pauseMenuUI;
   [SerializeField] private GameObject inGameUI;
+  [SerializeField] private TextMeshProUGUI levelCompleteText;
+  [SerializeField] private TextMeshProUGUI levelText;
+
   
   // Points awarded based on asteroid size
   [SerializeField] private int largeAsteroidPoints = 20;
@@ -30,29 +35,18 @@ public class GameManager : MonoBehaviour {
 
   void Awake() {
     Instance = this;
-    Time.timeScale = 1f; // Makes the game starts unpaused
+    Time.timeScale = 1f;
   }
+
   private void Start() {
-    // Load the high score from PlayerPrefs
     highScore = PlayerPrefs.GetInt("HighScore", 0);
   }
 
-
   // Main game loop - checks if all asteroids are destroyed to spawn the next wave or boss
   private void Update() {
-    if (asteroidCount == 0) {
-        level++;
-
-        if (level % 1 == 0) { // change to level % 1 == 0 for testing - every level is a boss level
-            // Boss level!
-            SpawnBoss();
-        } else {
-            // Normal wave
-            int numAsteroids = level;
-            for (int i = 0; i < numAsteroids; i++) {
-                SpawnAsteroid();
-            }
-        }
+    if (asteroidCount == 0 && !isTransitioning) {
+      level++;
+      StartCoroutine(LevelTransition());
     }
 
     // Toggle pause on Escape key press
@@ -64,37 +58,75 @@ public class GameManager : MonoBehaviour {
       }
     }
   }
+
+  // Handles the level transition, including UI updates and spawning the next wave or boss.
+ private IEnumerator LevelTransition() {
+    isTransitioning = true;
+
+    levelText.text = "Level " + level;
+
+    bool isBossLevel = level % 2 == 0;
+
+    if (level >= 1) {
+    levelCompleteText.gameObject.SetActive(true);
+
+    for (int i = 3; i > 0; i--) {
+        if (level == 1) {
+            levelCompleteText.text = "Game starts in " + i + "...";
+        } else {
+            levelCompleteText.text = "Next level starts in " + i + "...";
+        }
+        yield return new WaitForSeconds(1f);
+    }
+
+    levelCompleteText.gameObject.SetActive(false);
+}
+
+    if (isBossLevel) {
+        SpawnBoss();
+    } else {
+        int numAsteroids = level;
+        for (int i = 0; i < numAsteroids; i++) {
+            SpawnAsteroid();
+        }
+    }
+
+    isTransitioning = false;
+}
+
+
+  // Spawns a boss at a random edge of the screen with a tier based on how many bosses have been defeated.
   private void SpawnBoss() {
     float offset = Random.Range(0f, 1f);
     Vector2 viewportSpawnPosition = Vector2.zero;
 
     int edge = Random.Range(0, 4);
     if (edge == 0) {
-        viewportSpawnPosition = new Vector2(offset, 0);
+      viewportSpawnPosition = new Vector2(offset, 0);
     } else if (edge == 1) {
-        viewportSpawnPosition = new Vector2(offset, 1);
+      viewportSpawnPosition = new Vector2(offset, 1);
     } else if (edge == 2) {
-        viewportSpawnPosition = new Vector2(0, offset);
+      viewportSpawnPosition = new Vector2(0, offset);
     } else if (edge == 3) {
-        viewportSpawnPosition = new Vector2(1, offset);
+      viewportSpawnPosition = new Vector2(1, offset);
     }
 
     Vector2 worldSpawnPosition = Camera.main.ViewportToWorldPoint(viewportSpawnPosition);
     Boss boss = Instantiate(bossPrefab, worldSpawnPosition, Quaternion.identity);
-    int tier = Mathf.Min(bossesDefeated + 1, 3); // caps at 3
+    int tier = Mathf.Min(bossesDefeated + 1, 3);
     boss.SetTier(tier);
-}
-
-// Track how many bosses have been defeated to scale difficulty
-  public void OnBossDefeated() {
-      bossesDefeated++;
   }
 
+  public void OnBossDefeated() {
+    bossesDefeated++;
+  }
+
+  // Spawns an asteroid at a random edge of the screen.
   private void SpawnAsteroid() {
     float offset = Random.Range(0f, 1f);
     Vector2 viewportSpawnPosition = Vector2.zero;
 
-    int edge = Random.Range(0,  4);
+    int edge = Random.Range(0, 4);
     if (edge == 0) {
       viewportSpawnPosition = new Vector2(offset, 0);
     } else if (edge == 1) {
@@ -124,21 +156,18 @@ public class GameManager : MonoBehaviour {
     
     currentScore += points;
     
-    // Update high score if current score exceeds it
     if (currentScore > highScore) {
       highScore = currentScore;
       PlayerPrefs.SetInt("HighScore", highScore);
-      PlayerPrefs.Save(); // Save immediately
+      PlayerPrefs.Save();
     }
   }
 
   public void GameOver() {
-    // Save high score one more time on game over
     if (currentScore > PlayerPrefs.GetInt("HighScore", 0)) {
       PlayerPrefs.SetInt("HighScore", currentScore);
       PlayerPrefs.Save();
     }
-    
     StartCoroutine(Restart());
   }
 
@@ -149,25 +178,21 @@ public class GameManager : MonoBehaviour {
     yield return null;
   }
 
-  public void PauseGame()
-  {
+  public void PauseGame() {
     isPaused = true;
     Time.timeScale = 0f;
     inGameUI.SetActive(false);
     pauseMenuUI.SetActive(true);
     Cursor.lockState = CursorLockMode.None;
     Cursor.visible = true;
-    
   }
 
-  public void ResumeGame()
-  {
+  public void ResumeGame() {
     isPaused = false;
     Time.timeScale = 1f;
     pauseMenuUI.SetActive(false);
     inGameUI.SetActive(true);
     Cursor.lockState = CursorLockMode.Locked;
     Cursor.visible = false;
-    
   }
 }
