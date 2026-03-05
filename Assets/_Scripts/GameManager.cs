@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour {
-  public static GameManager Instance { get; private set; }
+
+  // Singleton pattern for easy access from other scripts
+  public static GameManager Instance { 
+    get; 
+    private set; 
+    }
   [SerializeField] private Asteroid asteroidPrefab;
   [SerializeField] private Boss bossPrefab;
+  [SerializeField] private Powerup powerupPrefab;
+  [SerializeField] private float powerupSpawnInterval = 30f;
 
   public int asteroidCount = 0;
   private int level = 0;
@@ -33,7 +40,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private TextMeshProUGUI levelCompleteText;
   [SerializeField] private TextMeshProUGUI levelText;
 
-  // Lives UI (unassigned))
+  // Lives UI — (do later)
   [SerializeField] private GameObject[] lifeIcons;
 
   // Points awarded based on asteroid size
@@ -50,6 +57,7 @@ public class GameManager : MonoBehaviour {
   private void Start() {
     highScore = PlayerPrefs.GetInt("HighScore", 0);
     UpdateLivesUI();
+    StartCoroutine(PowerupSpawnLoop());
   }
 
   // Main game loop
@@ -142,7 +150,23 @@ public class GameManager : MonoBehaviour {
     asteroid.gameManager = this;
   }
 
-  // Shared helper: random point on one of the four screen edges
+  // Spawns a powerup at a random position on screen at a fixed interval
+  private IEnumerator PowerupSpawnLoop() {
+    while (true) {
+      yield return new WaitForSeconds(powerupSpawnInterval);
+      SpawnPowerup();
+    }
+  }
+
+  private void SpawnPowerup() {
+    if (powerupPrefab == null) return;
+
+    // Spawn at a random position within the visible play area
+    Vector2 viewportPos = new Vector2(Random.Range(0.1f, 0.9f), Random.Range(0.1f, 0.9f));
+    Vector2 worldPos = Camera.main.ViewportToWorldPoint(viewportPos);
+    Instantiate(powerupPrefab, worldPos, Quaternion.identity);
+  }
+
   private Vector2 GetRandomEdgePosition() {
     float offset = Random.Range(0f, 1f);
     Vector2 viewportPos;

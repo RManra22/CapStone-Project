@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 // This script is responsible for the behaviour of the player in the game.
 public class Player : MonoBehaviour {
   [Header("Ship parameters")]
-  [SerializeField] private float shipAcceleration = 3f;
-  [SerializeField] private float shipMaxVelocity = 3f;
+  [SerializeField] private float shipAcceleration = 6f;
+  [SerializeField] private float shipMaxVelocity = 6f;
   [SerializeField] private float shipRotationSpeed = 180f;
   [SerializeField] private float bulletSpeed = 4f;
 
@@ -25,8 +25,13 @@ public class Player : MonoBehaviour {
   [SerializeField] private ParticleSystem destroyedParticles;
 
   [Header("Respawn invincibility")]
-  [SerializeField] private float invincibilityDuration = 2f;
+  [SerializeField] private float invincibilityDuration = 3f;
   [SerializeField] private float flashInterval = 0.15f;
+
+  [Header("Powerups")]
+  [SerializeField] private float fastShootDuration = 8f;
+  [SerializeField] private float fastShootMultiplier = 0.35f; // fire rate multiplier while active
+  private float baseFireRateMultiplier = 1f;
 
   private PlayerInput playerInput;
   private Rigidbody2D shipRigidbody;
@@ -43,7 +48,7 @@ public class Player : MonoBehaviour {
     if (currentShootingStyle < 1 || currentShootingStyle > 3)
       currentShootingStyle = 1;
 
-    // Always start with invincibility 
+    // Always start with invincibility
     StartCoroutine(RespawnInvincibility());
   }
 
@@ -118,17 +123,30 @@ public class Player : MonoBehaviour {
     switch (currentShootingStyle) {
       case 1:
         ShootSingle();
-        nextFireTime = Time.time + singleShotFireRate;
+        nextFireTime = Time.time + singleShotFireRate * baseFireRateMultiplier;
         break;
       case 2:
         ShootSpread();
-        nextFireTime = Time.time + spreadFireRate;
+        nextFireTime = Time.time + spreadFireRate * baseFireRateMultiplier;
         break;
       case 3:
         StartCoroutine(ShootBurst());
-        nextFireTime = Time.time + burstFireRate;
+        nextFireTime = Time.time + burstFireRate * baseFireRateMultiplier;
         break;
     }
+  }
+
+  // Called by the Powerup when the player collects it
+  public void ApplyFastShootPowerup() {
+    StopCoroutine(nameof(FastShootTimer)); // cancel existing powerup if already active
+    StartCoroutine(nameof(FastShootTimer));
+  }
+
+  private IEnumerator FastShootTimer() {
+    baseFireRateMultiplier = fastShootMultiplier;
+    // TODO: show a powerup active indicator in UI
+    yield return new WaitForSeconds(fastShootDuration);
+    baseFireRateMultiplier = 1f;
   }
 
   private void ShootSingle() {
