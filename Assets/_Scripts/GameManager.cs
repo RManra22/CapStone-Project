@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
     get; 
     private set; 
     }
-  [SerializeField] private Asteroid asteroidPrefab;
+  [SerializeField] private Asteroid asteroidPrefab; 
   [SerializeField] private Boss bossPrefab;
   [SerializeField] private Powerup powerupPrefab;
   [SerializeField] private float powerupSpawnInterval = 30f;
@@ -100,13 +100,13 @@ public class GameManager : MonoBehaviour {
     Instantiate(playerPrefab, spawnPos, Quaternion.identity);
   }
 
-  // Level transition coroutine
+  // Level transition
   private IEnumerator LevelTransition() {
     isTransitioning = true;
 
     levelText.text = "Level " + level;
 
-    bool isBossLevel = level % 2 == 0;
+    bool isBossLevel = level % 3 == 0;
 
     if (level >= 1) {
       levelCompleteText.gameObject.SetActive(true);

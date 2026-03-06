@@ -75,6 +75,8 @@ public void SetTier(int tier) {
     }
     }
 
+
+  // Helper to rotate a vector by degrees
   private void Start() {
     rb = GetComponent<Rigidbody2D>();
     gameManager = FindAnyObjectByType<GameManager>();
@@ -112,6 +114,7 @@ public void SetTier(int tier) {
     float newAngle = Mathf.MoveTowardsAngle(rb.rotation, angle, rotationSpeed * Time.fixedDeltaTime);
     rb.MoveRotation(newAngle);
 
+    // Movement based on state
     if (state == BossState.Chasing) {
       rb.AddForce(dirToPlayer * chaseSpeed);
     } else if (state == BossState.Enraged) {
@@ -144,7 +147,7 @@ public void SetTier(int tier) {
       StartCoroutine(ShootSpiral());
     }
 
-    // Asteroid spawn — all phases
+    // Asteroid spawn — phase 2+
     if (Time.time >= nextAsteroidSpawnTime) {
       SpawnAsteroids();
       nextAsteroidSpawnTime = Time.time + asteroidSpawnInterval;
@@ -166,6 +169,7 @@ public void SetTier(int tier) {
     }
   }
 
+  // Spiral shoot coroutine — fires bullets in a rotating pattern for a few seconds
   private IEnumerator ShootSpiral() {
     spiralRunning = true;
     int totalBullets = 16;
@@ -179,6 +183,7 @@ public void SetTier(int tier) {
     spiralRunning = false;
   }
 
+  // Spawn smaller asteroids around the boss's position that drift outward in random directions
   private void SpawnAsteroids() {
     for (int i = 0; i < asteroidsToSpawn; i++) {
       Vector2 offset = Random.insideUnitCircle.normalized * 2f;
@@ -188,6 +193,7 @@ public void SetTier(int tier) {
     }
   }
 
+  // Helper to fire a bullet in a direction
   private void FireBullet(Vector2 direction) {
     if (bulletSpawn == null) return;
     Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
