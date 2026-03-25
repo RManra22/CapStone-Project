@@ -195,17 +195,20 @@ public class GameManager : MonoBehaviour {
 
   public void GameOver() {
     if (currentScore > PlayerPrefs.GetInt("HighScore", 0)) {
-      PlayerPrefs.SetInt("HighScore", currentScore);
-      PlayerPrefs.Save();
+        PlayerPrefs.SetInt("HighScore", currentScore);
+        PlayerPrefs.Save();
     }
+    PlayerPrefs.SetInt("LastScore", currentScore);
+    PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
+    PlayerPrefs.Save();
     StartCoroutine(Restart());
-  }
+}
 
   private IEnumerator Restart() {
     Debug.Log("Game Over - Final Score: " + currentScore);
     yield return new WaitForSeconds(2f);
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-  }
+    SceneManager.LoadScene("GameOver");
+}
 
   public void PauseGame() {
     isPaused = true;
