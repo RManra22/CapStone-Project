@@ -186,11 +186,11 @@ public class Player : MonoBehaviour {
 
   private void OnTriggerEnter2D(Collider2D collision) {
     if (!isAlive || isInvincible) return;
-    if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet")) {
-      isAlive = false;
-      GameManager.Instance.OnPlayerDied();
-      Instantiate(destroyedParticles, transform.position, Quaternion.identity);
-      Destroy(gameObject);
+    if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet") || collision.CompareTag("Boss")) {
+        isAlive = false;
+        GameManager.Instance.OnPlayerDied();
+        Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
-  }
+}
 }
