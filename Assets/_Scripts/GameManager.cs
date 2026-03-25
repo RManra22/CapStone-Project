@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour {
 
     levelText.text = "Level " + level;
 
-    bool isBossLevel = level % 3 == 0;
+    bool isBossLevel = level % 1 == 0;
 
     if (level >= 1) {
       levelCompleteText.gameObject.SetActive(true);

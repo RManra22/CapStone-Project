@@ -46,8 +46,8 @@ public class Boss : MonoBehaviour {
 
 
 private int tier = 1; // Default to tier 1, will be set by GameManager on spawn
-public void SetTier(int tier) {
-    tier = tier = Mathf.Clamp(tier, 1, 3); // Ensure tier is between 1 and 3
+public void SetTier(int newTier) {
+    tier = Mathf.Clamp(newTier, 1, 3); // Ensure tier is between 1 and 3
     switch (tier) {
         case 1:
             maxHealth = 5;
@@ -99,6 +99,12 @@ public void SetTier(int tier) {
 
   private void Update() {
     if (!isAlive) return;
+
+    // Re-acquire player reference if it was destroyed (e.g. after respawn)
+    if (player == null) {
+        Player playerObj = FindAnyObjectByType<Player>();
+        if (playerObj != null) player = playerObj.transform;
+    }
     UpdateState();
     HandleAttacks();
   }
@@ -130,29 +136,29 @@ public void SetTier(int tier) {
   }
 
   private void HandleAttacks() {
-    // Single aimed shot — all phases
+    // Single aimed shot — all tiers
     if (Time.time >= nextSingleShotTime) {
-      ShootAtPlayer();
-      nextSingleShotTime = Time.time + singleShotInterval;
+        ShootAtPlayer();
+        nextSingleShotTime = Time.time + singleShotInterval;
     }
 
-    // Spread shot — phase 2+
-    if (state != BossState.Drifting && Time.time >= nextSpreadShotTime) {
-      ShootSpread();
-      nextSpreadShotTime = Time.time + spreadShotInterval;
+    // Spread shot — tier 2+ only
+    if (tier >= 2 && state != BossState.Drifting && Time.time >= nextSpreadShotTime) {
+        ShootSpread();
+        nextSpreadShotTime = Time.time + spreadShotInterval;
     }
 
-    // Spiral — enraged only
-    if (state == BossState.Enraged && !spiralRunning) {
-      StartCoroutine(ShootSpiral());
+    // Spiral — tier 3 enraged only
+    if (tier >= 3 && state == BossState.Enraged && !spiralRunning) {
+        StartCoroutine(ShootSpiral());
     }
 
-    // Asteroid spawn — phase 2+
-    if (Time.time >= nextAsteroidSpawnTime) {
-      SpawnAsteroids();
-      nextAsteroidSpawnTime = Time.time + asteroidSpawnInterval;
+    // Asteroid spawn — tier 2+ only
+    if (tier >= 2 && Time.time >= nextAsteroidSpawnTime) {
+        SpawnAsteroids();
+        nextAsteroidSpawnTime = Time.time + asteroidSpawnInterval;
     }
-  }
+}
 
   private void ShootAtPlayer() {
     if (player == null) return;
