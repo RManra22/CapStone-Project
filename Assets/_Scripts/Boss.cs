@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 // Boss enemy with multiple attack patterns and phases.
@@ -30,7 +31,7 @@ public class Boss : MonoBehaviour {
 
   [Header("Attack - Asteroid Spawn")]
   [SerializeField] private float asteroidSpawnInterval = 6f;
-  [SerializeField] private int asteroidsToSpawn = 3;
+  [SerializeField] private int asteroidsToSpawn = 2;
 
   private enum BossState { Drifting, Chasing, Enraged }
   private BossState state = BossState.Drifting;
@@ -44,6 +45,8 @@ public class Boss : MonoBehaviour {
   private float nextSpreadShotTime;
   private float nextAsteroidSpawnTime;
   private bool spiralRunning = false;
+  private List<Asteroid> spawnedAsteroids = new List<Asteroid>(); // Track spawned asteroids to avoid overwhelming the player 
+
 
 
 private int tier = 1; // Default to tier 1, will be set by GameManager on spawn
@@ -68,10 +71,10 @@ public void SetTier(int newTier) {
             maxHealth = 10;
             // everything unlocked, faster and more aggressive
             spreadShotInterval = 2f;
-            asteroidSpawnInterval = 4f;
+            asteroidSpawnInterval = 7f;
             chaseSpeed = 5f;
             enragedSpeed = 8f;
-            asteroidsToSpawn = 5;
+            asteroidsToSpawn = 3;
             break;
     }
     }
@@ -191,14 +194,25 @@ public void SetTier(int newTier) {
   }
 
   // Spawn smaller asteroids around the boss's position that drift outward in random directions
-  private void SpawnAsteroids() {
+ private void SpawnAsteroids() {
     for (int i = 0; i < asteroidsToSpawn; i++) {
-      Vector2 offset = Random.insideUnitCircle.normalized * 2f;
-      Asteroid a = Instantiate(asteroidPrefab, (Vector2)transform.position + offset, Quaternion.identity);
-      a.size = 1;
-      a.gameManager = gameManager;
+        Vector2 offset = Random.insideUnitCircle.normalized * 2f;
+        Asteroid a = Instantiate(asteroidPrefab, (Vector2)transform.position + offset, Quaternion.identity);
+        a.size = 1;
+        a.gameManager = gameManager;
+        spawnedAsteroids.Add(a);
+        StartCoroutine(DespawnAsteroid(a, 15f));
     }
-  }
+}
+// Helper to despawn asteroids after a delay to prevent overwhelming the player
+private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
+    yield return new WaitForSeconds(delay);
+    if (asteroid != null) {
+        spawnedAsteroids.Remove(asteroid);
+        gameManager.asteroidCount--;
+        Destroy(asteroid.gameObject);
+    }
+}
 
   // Helper to fire a bullet in a direction
   private void FireBullet(Vector2 direction) {
@@ -234,19 +248,28 @@ public void SetTier(int newTier) {
 
   private void Die() {
     isAlive = false;
+
+    // Destroy all spawned asteroids
+    foreach (Asteroid a in spawnedAsteroids) {
+        if (a != null) {
+            gameManager.asteroidCount--;
+            Destroy(a.gameObject);
+        }
+    }
+    spawnedAsteroids.Clear();
+
     gameManager.asteroidCount--;
     gameManager.OnBossDefeated();
 
     int bossPoints = tier == 1 ? 500 : tier == 2 ? 1000 : 1500;
     gameManager.currentScore += bossPoints;
 
-    // Drop health pack at boss position
     if (healthPackPrefab != null)
         Instantiate(healthPackPrefab, transform.position, Quaternion.identity);
 
     Instantiate(destroyedParticles, transform.position, Quaternion.identity);
     Destroy(gameObject);
-} 
+}
 
   private Vector2 Rotate2D(Vector2 vector, float degrees) {
     float radians = degrees * Mathf.Deg2Rad;
