@@ -74,13 +74,13 @@ public class GameManager : MonoBehaviour {
   }
 
   // Refresh life icons — active icons = remaining lives, inactive = lost lives
-  private void UpdateLivesUI() {
+  public void UpdateLivesUI() {
     if (lifeIcons == null) return;
     for (int i = 0; i < lifeIcons.Length; i++) {
-      if (lifeIcons[i] != null)
-        lifeIcons[i].SetActive(i < currentLives);
+        if (lifeIcons[i] != null)
+            lifeIcons[i].SetActive(i < currentLives);
     }
-  }
+}
 
   // Called by Player when it is destroyed. Deducts a life and either respawns or ends the game.
   public void OnPlayerDied() {

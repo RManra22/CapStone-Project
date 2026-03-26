@@ -147,6 +147,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 596919739819775671}
   destroyedParticles: {fileID: 2073316840830977708, guid: 76968e30eab311848a53795db83af44d, type: 3}
   asteroidPrefab: {fileID: 6403052524635954951, guid: dc47b7d0160e27a4f92b26ea52eac188, type: 3}
+  healthPackPrefab: {fileID: 5712203574150831345, guid: 86e98f62e233449e092f505133e81f85, type: 3}
   maxHealth: 15
   driftSpeed: 1.5
   chaseSpeed: 3.5

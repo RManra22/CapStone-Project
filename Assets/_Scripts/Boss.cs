@@ -9,6 +9,7 @@ public class Boss : MonoBehaviour {
   [SerializeField] private Transform bulletSpawn;           // Empty child object at the front of the boss
   [SerializeField] private ParticleSystem destroyedParticles;
   [SerializeField] private Asteroid asteroidPrefab;         // For the asteroid-spawn attack
+  [SerializeField] private HealthPack healthPackPrefab;
 
   [Header("Health")]
   [SerializeField] private int maxHealth = 15;
@@ -236,13 +237,16 @@ public void SetTier(int newTier) {
     gameManager.asteroidCount--;
     gameManager.OnBossDefeated();
 
-    // Award points based on tier
     int bossPoints = tier == 1 ? 500 : tier == 2 ? 1000 : 1500;
     gameManager.currentScore += bossPoints;
 
+    // Drop health pack at boss position
+    if (healthPackPrefab != null)
+        Instantiate(healthPackPrefab, transform.position, Quaternion.identity);
+
     Instantiate(destroyedParticles, transform.position, Quaternion.identity);
     Destroy(gameObject);
-}
+} 
 
   private Vector2 Rotate2D(Vector2 vector, float degrees) {
     float radians = degrees * Mathf.Deg2Rad;
