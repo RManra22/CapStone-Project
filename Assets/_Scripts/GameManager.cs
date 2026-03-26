@@ -198,6 +198,13 @@ public class GameManager : MonoBehaviour {
         PlayerPrefs.SetInt("HighScore", currentScore);
         PlayerPrefs.Save();
     }
+
+    // Calculate and add credits
+    int creditsEarned = currentScore / 100;
+    int totalCredits = PlayerPrefs.GetInt("TotalCredits", 0) + creditsEarned;
+    PlayerPrefs.SetInt("TotalCredits", totalCredits);
+    PlayerPrefs.SetInt("CreditsEarned", creditsEarned);
+
     PlayerPrefs.SetInt("LastScore", currentScore);
     PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
     PlayerPrefs.Save();
