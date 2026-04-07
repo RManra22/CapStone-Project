@@ -1,0 +1,2899 @@
+fileFormatVersion: 2
+guid: 806a88b9eac0c1c44be85d460c2e6f56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7051480301275156021
+    second: PlayerShmup32x32_0
+  - first:
+      213: -3270038215462789446
+    second: PlayerShmup32x32_1
+  - first:
+      213: -3072745446766358092
+    second: PlayerShmup32x32_2
+  - first:
+      213: 4721466985513437358
+    second: PlayerShmup32x32_3
+  - first:
+      213: -6356868913171217451
+    second: PlayerShmup32x32_4
+  - first:
+      213: -373078667638388670
+    second: PlayerShmup32x32_5
+  - first:
+      213: -982442726158807945
+    second: PlayerShmup32x32_6
+  - first:
+      213: 46251837462770109
+    second: PlayerShmup32x32_7
+  - first:
+      213: -7717987814526184605
+    second: PlayerShmup32x32_8
+  - first:
+      213: -2794558136236293136
+    second: PlayerShmup32x32_9
+  - first:
+      213: -3894474117124651123
+    second: PlayerShmup32x32_10
+  - first:
+      213: -1451836448397019089
+    second: PlayerShmup32x32_11
+  - first:
+      213: -6061706946242773850
+    second: PlayerShmup32x32_12
+  - first:
+      213: -8790786080340584954
+    second: PlayerShmup32x32_13
+  - first:
+      213: 7574426925385974376
+    second: PlayerShmup32x32_14
+  - first:
+      213: -368385178219706115
+    second: PlayerShmup32x32_15
+  - first:
+      213: 2152208028889805068
+    second: PlayerShmup32x32_16
+  - first:
+      213: -3931701649432165174
+    second: PlayerShmup32x32_17
+  - first:
+      213: 3671798430809312526
+    second: PlayerShmup32x32_18
+  - first:
+      213: -5837750275268536399
+    second: PlayerShmup32x32_19
+  - first:
+      213: -2347581357280178673
+    second: PlayerShmup32x32_20
+  - first:
+      213: -8568216056615919436
+    second: PlayerShmup32x32_21
+  - first:
+      213: 9007765064317936811
+    second: PlayerShmup32x32_22
+  - first:
+      213: 3694871898037943171
+    second: PlayerShmup32x32_23
+  - first:
+      213: -5846252500710611792
+    second: PlayerShmup32x32_24
+  - first:
+      213: 1660555344845321758
+    second: PlayerShmup32x32_25
+  - first:
+      213: 2494282271194005520
+    second: PlayerShmup32x32_26
+  - first:
+      213: 6998160432121303695
+    second: PlayerShmup32x32_27
+  - first:
+      213: -6695104347060675429
+    second: PlayerShmup32x32_28
+  - first:
+      213: -3956748585754686311
+    second: PlayerShmup32x32_29
+  - first:
+      213: 644852096735536966
+    second: PlayerShmup32x32_30
+  - first:
+      213: -5789527498369183417
+    second: PlayerShmup32x32_31
+  - first:
+      213: -8238065432522158474
+    second: PlayerShmup32x32_32
+  - first:
+      213: 3214841688734156424
+    second: PlayerShmup32x32_33
+  - first:
+      213: 3926793932064601668
+    second: PlayerShmup32x32_34
+  - first:
+      213: -5558372407944886232
+    second: PlayerShmup32x32_35
+  - first:
+      213: -8448868647686107162
+    second: PlayerShmup32x32_36
+  - first:
+      213: 3209359166623369728
+    second: PlayerShmup32x32_37
+  - first:
+      213: 7707137326929655967
+    second: PlayerShmup32x32_38
+  - first:
+      213: 2618535884365145433
+    second: PlayerShmup32x32_39
+  - first:
+      213: 3389783160278823962
+    second: PlayerShmup32x32_40
+  - first:
+      213: 8767833101411959834
+    second: PlayerShmup32x32_41
+  - first:
+      213: -6246095921702845717
+    second: PlayerShmup32x32_42
+  - first:
+      213: -1295962058664240808
+    second: PlayerShmup32x32_43
+  - first:
+      213: -7002955861534579941
+    second: PlayerShmup32x32_44
+  - first:
+      213: -2000015526998455744
+    second: PlayerShmup32x32_45
+  - first:
+      213: -2194431807920073800
+    second: PlayerShmup32x32_46
+  - first:
+      213: 4630254550914776572
+    second: PlayerShmup32x32_47
+  - first:
+      213: 3329804789617637534
+    second: PlayerShmup32x32_48
+  - first:
+      213: -5551804673836088259
+    second: PlayerShmup32x32_49
+  - first:
+      213: -2153500080689324278
+    second: PlayerShmup32x32_50
+  - first:
+      213: 2186195935164419178
+    second: PlayerShmup32x32_51
+  - first:
+      213: 120733797617284323
+    second: PlayerShmup32x32_52
+  - first:
+      213: -5150764435653828841
+    second: PlayerShmup32x32_53
+  - first:
+      213: 2009273905947015632
+    second: PlayerShmup32x32_54
+  - first:
+      213: 3732418418583923562
+    second: PlayerShmup32x32_55
+  - first:
+      213: -172921736685001717
+    second: PlayerShmup32x32_56
+  - first:
+      213: 1031853520488349855
+    second: PlayerShmup32x32_57
+  - first:
+      213: -6121139662033629270
+    second: PlayerShmup32x32_58
+  - first:
+      213: -6496382399299547356
+    second: PlayerShmup32x32_59
+  - first:
+      213: 7877331702216319344
+    second: PlayerShmup32x32_60
+  - first:
+      213: -1338608584213381513
+    second: PlayerShmup32x32_61
+  - first:
+      213: 5704352994181441413
+    second: PlayerShmup32x32_62
+  - first:
+      213: 3087426026090058637
+    second: PlayerShmup32x32_63
+  - first:
+      213: 5532284757179776151
+    second: PlayerShmup32x32_64
+  - first:
+      213: -4084850655694860368
+    second: PlayerShmup32x32_65
+  - first:
+      213: -862163084490533811
+    second: PlayerShmup32x32_66
+  - first:
+      213: -8244899574306360936
+    second: PlayerShmup32x32_67
+  - first:
+      213: -468533517755372942
+    second: PlayerShmup32x32_68
+  - first:
+      213: -2592697061508682920
+    second: PlayerShmup32x32_69
+  - first:
+      213: 5838078628454703218
+    second: PlayerShmup32x32_70
+  - first:
+      213: -5381636432213243013
+    second: PlayerShmup32x32_71
+  - first:
+      213: -1292278867011183285
+    second: PlayerShmup32x32_72
+  - first:
+      213: 8785264980381255162
+    second: PlayerShmup32x32_73
+  - first:
+      213: -6394841974553303943
+    second: PlayerShmup32x32_74
+  - first:
+      213: -4399285006050735486
+    second: PlayerShmup32x32_75
+  - first:
+      213: 866868418726541900
+    second: PlayerShmup32x32_76
+  - first:
+      213: 523665267492512525
+    second: PlayerShmup32x32_77
+  - first:
+      213: 5235158587679405585
+    second: PlayerShmup32x32_78
+  - first:
+      213: -4203784354401673589
+    second: PlayerShmup32x32_79
+  - first:
+      213: -5139217972875558045
+    second: PlayerShmup32x32_80
+  - first:
+      213: 1320922543048616
+    second: PlayerShmup32x32_81
+  - first:
+      213: 2094090668785013539
+    second: PlayerShmup32x32_82
+  - first:
+      213: 2416420106300365549
+    second: PlayerShmup32x32_83
+  - first:
+      213: 584372439205115403
+    second: PlayerShmup32x32_84
+  - first:
+      213: -3377672574768200031
+    second: PlayerShmup32x32_85
+  - first:
+      213: 2360154687981966437
+    second: PlayerShmup32x32_86
+  - first:
+      213: 7006623177287855643
+    second: PlayerShmup32x32_87
+  - first:
+      213: 5471473893175807726
+    second: PlayerShmup32x32_88
+  - first:
+      213: -1910952785665189272
+    second: PlayerShmup32x32_89
+  - first:
+      213: 4705810977119355925
+    second: PlayerShmup32x32_90
+  - first:
+      213: -7622774103375598579
+    second: PlayerShmup32x32_91
+  - first:
+      213: 8237162515716792662
+    second: PlayerShmup32x32_92
+  - first:
+      213: 8936109472829716093
+    second: PlayerShmup32x32_93
+  - first:
+      213: -1509387529414535162
+    second: PlayerShmup32x32_94
+  - first:
+      213: -4825938495460425123
+    second: PlayerShmup32x32_95
+  - first:
+      213: 6652272019990841673
+    second: PlayerShmup32x32_96
+  - first:
+      213: 2180981390308984029
+    second: PlayerShmup32x32_97
+  - first:
+      213: 2235536264507919576
+    second: PlayerShmup32x32_98
+  - first:
+      213: 8818061890163189203
+    second: PlayerShmup32x32_99
+  - first:
+      213: 5236743562639874017
+    second: PlayerShmup32x32_100
+  - first:
+      213: -2822075631130438224
+    second: PlayerShmup32x32_101
+  - first:
+      213: 6045578100012406808
+    second: PlayerShmup32x32_102
+  - first:
+      213: -1474184686385092665
+    second: PlayerShmup32x32_103
+  - first:
+      213: -2414507090222025772
+    second: PlayerShmup32x32_104
+  - first:
+      213: 6226567664569887066
+    second: PlayerShmup32x32_105
+  - first:
+      213: -733136842319407924
+    second: PlayerShmup32x32_106
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerShmup32x32_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 258
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc174ddb60c142e90800000000000000
+      internalID: -7051480301275156021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 258
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe5365819d7e92d0800000000000000
+      internalID: -3270038215462789446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 257
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1da48db4a6b55d0800000000000000
+      internalID: -3072745446766358092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 258
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8434a3535068140800000000000000
+      internalID: 4721466985513437358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 256
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3c4b2576dd7c7a0800000000000000
+      internalID: -6356868913171217451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 258
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248432eadee82daf0800000000000000
+      internalID: -373078667638388670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 256
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c4327bb89ad52f0800000000000000
+      internalID: -982442726158807945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 256
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db17d261dc154a000800000000000000
+      internalID: 46251837462770109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 256
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3639f5e69f234e490800000000000000
+      internalID: -7717987814526184605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 255
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f345796e2cb739d0800000000000000
+      internalID: -2794558136236293136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 224
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8705dd9c6c04f9c0800000000000000
+      internalID: -3894474117124651123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 226
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28b45d317a0adbe0800000000000000
+      internalID: -1451836448397019089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 224
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac7ea016ad70eba0800000000000000
+      internalID: -6061706946242773850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_13
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 224
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606d9d0b2aad00680800000000000000
+      internalID: -8790786080340584954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 224
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86209c85825cd1960800000000000000
+      internalID: 7574426925385974376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 223
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df802b7d1ab33eaf0800000000000000
+      internalID: -368385178219706115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_16
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 235
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0178b4accd2edd10800000000000000
+      internalID: 2152208028889805068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_17
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 232
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac447ce4e2acf69c0800000000000000
+      internalID: -3931701649432165174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 228
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0dc9330839d4f230800000000000000
+      internalID: 3671798430809312526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_19
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 203
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b71e2bed052cfea0800000000000000
+      internalID: -5837750275268536399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 200
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e4cfd8137bb6fd0800000000000000
+      internalID: -2347581357280178673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 196
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b02c9294e4971980800000000000000
+      internalID: -8568216056615919436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 161
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba428dec992020d70800000000000000
+      internalID: 9007765064317936811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 161
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38bff1d3a62d64330800000000000000
+      internalID: 3694871898037943171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_24
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 168
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4a7eb4350fddea0800000000000000
+      internalID: -5846252500710611792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_25
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 199
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16b163c94a7b0710800000000000000
+      internalID: 1660555344845321758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_26
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 205
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010c218a2887d9220800000000000000
+      internalID: 2494282271194005520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_27
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 196
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82d8cdc5d57e1160800000000000000
+      internalID: 6998160432121303695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_28
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 199
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c564b81163613a0800000000000000
+      internalID: -6695104347060675429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 185
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c0090002ec619c0800000000000000
+      internalID: -3956748585754686311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_30
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 160
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647669eb099f2f800800000000000000
+      internalID: 644852096735536966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 164
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 741595a1a6777afa0800000000000000
+      internalID: -5789527498369183417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_32
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 163
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e8712e2238cad80800000000000000
+      internalID: -8238065432522158474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_33
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 164
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886cd12ab796d9c20800000000000000
+      internalID: 3214841688734156424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_34
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 167
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446bed2b646ce7630800000000000000
+      internalID: 3926793932064601668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_35
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 173
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828cc179eb1bcd2b0800000000000000
+      internalID: -5558372407944886232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_36
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 186
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef0cbc9ab69fba80800000000000000
+      internalID: -8448868647686107162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_37
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 170
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00aca3b782fe98c20800000000000000
+      internalID: 3209359166623369728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_38
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 172
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98bbce809045fa60800000000000000
+      internalID: 7707137326929655967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_39
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 168
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955a2336388e65420800000000000000
+      internalID: 2618535884365145433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_40
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 168
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14350e03ddea0f20800000000000000
+      internalID: 3389783160278823962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_41
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 165
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14429370c99da970800000000000000
+      internalID: 8767833101411959834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_42
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 165
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2c2e93ad86159a0800000000000000
+      internalID: -6246095921702845717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_43
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 128
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8591feabf51d30ee0800000000000000
+      internalID: -1295962058664240808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_44
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 161
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13ed774fb080de90800000000000000
+      internalID: -7002955861534579941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_45
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 95
+        width: 67
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04acdf789748e34e0800000000000000
+      internalID: -2000015526998455744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_46
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 161
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b31b15b5efcb81e0800000000000000
+      internalID: -2194431807920073800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_47
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 132
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd39ee5bf7f14040800000000000000
+      internalID: 4630254550914776572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_48
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 131
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98bd8860d7d53e20800000000000000
+      internalID: 3329804789617637534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_49
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 132
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3485a9501704f2b0800000000000000
+      internalID: -5551804673836088259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_50
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 146
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0fdcba161b3d12e0800000000000000
+      internalID: -2153500080689324278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_51
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 137
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cc0ecbe9de65e10800000000000000
+      internalID: 2186195935164419178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_52
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 146
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4bc5fcfbeeca100800000000000000
+      internalID: 120733797617284323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_53
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 134
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f5323290fc488b0800000000000000
+      internalID: -5150764435653828841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_54
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 134
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9fe6cc8ff52eb10800000000000000
+      internalID: 2009273905947015632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_55
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 135
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6be1d8c6c63cc330800000000000000
+      internalID: 3732418418583923562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_56
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 96
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0462feb898a99df0800000000000000
+      internalID: -172921736685001717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_57
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 134
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90c1f45f41e15e00800000000000000
+      internalID: 1031853520488349855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_58
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 134
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf4ee798e75d0ba0800000000000000
+      internalID: -6121139662033629270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_59
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 100
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f86ac80a638d5a0800000000000000
+      internalID: -6496382399299547356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_60
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 99
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071e6808277e15d60800000000000000
+      internalID: 7877331702216319344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_61
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 96
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e3cacb59e4c6de0800000000000000
+      internalID: -1338608584213381513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_62
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 97
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587ee9343dee92f40800000000000000
+      internalID: 5704352994181441413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 97
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83d463ec9db8da20800000000000000
+      internalID: 3087426026090058637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_64
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 103
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c3204ecaf96cc40800000000000000
+      internalID: 5532284757179776151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_65
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 115
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf49ca98f1bf47c0800000000000000
+      internalID: -4084850655694860368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_66
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 116
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d449c7a1e3bf804f0800000000000000
+      internalID: -862163084490533811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_67
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 105
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89133b0458b349d80800000000000000
+      internalID: -8244899574306360936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_68
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 121
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27aa3dc7f3f6f79f0800000000000000
+      internalID: -468533517755372942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_69
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 97
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b639e52c3e40cd0800000000000000
+      internalID: -2592697061508682920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_70
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 122
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270a7d3c495050150800000000000000
+      internalID: 5838078628454703218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_71
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 96
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b01a39d269055b0800000000000000
+      internalID: -5381636432213243013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_72
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 97
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ddd0d9737e01ee0800000000000000
+      internalID: -1292278867011183285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_73
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 95
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5cd4d04f78be970800000000000000
+      internalID: 8785264980381255162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_74
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 103
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9742efffa15f047a0800000000000000
+      internalID: -6394841974553303943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_75
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 106
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ac4ac689992f2c0800000000000000
+      internalID: -4399285006050735486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_76
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 97
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a3335eb3cb70c00800000000000000
+      internalID: 866868418726541900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_77
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 106
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03e91a49ce644700800000000000000
+      internalID: 523665267492512525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_78
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 100
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11677799ff407a840800000000000000
+      internalID: 5235158587679405585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 66
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e1b8bf66829a5c0800000000000000
+      internalID: -4203784354401673589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_80
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 91
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363037f7b74dda8b0800000000000000
+      internalID: -5139217972875558045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_81
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 97
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a744fe3f51b40000800000000000000
+      internalID: 1320922543048616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_82
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 97
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32314684e54bf0d10800000000000000
+      internalID: 2094090668785013539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_83
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 71
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea1520b849d88120800000000000000
+      internalID: 2416420106300365549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_84
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 68
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06795723ab1c1800800000000000000
+      internalID: 584372439205115403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_85
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 65
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6cc5d50b81021d0800000000000000
+      internalID: -3377672574768200031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_86
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 69
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56453202f24f0c020800000000000000
+      internalID: 2360154687981966437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_87
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 65
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ee24538a68c3160800000000000000
+      internalID: 7006623177287855643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_88
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 66
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee419844849eeb40800000000000000
+      internalID: 5471473893175807726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_89
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 73
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a12ebe09eea75e0800000000000000
+      internalID: -1910952785665189272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_90
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 75
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5144557b6266e4140800000000000000
+      internalID: 4705810977119355925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_91
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 77
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c20451757763690800000000000000
+      internalID: -7622774103375598579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_92
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 36
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651667a6aa7405270800000000000000
+      internalID: 8237162515716792662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_93
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76b4025830730c70800000000000000
+      internalID: 8936109472829716093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_94
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60897d00a049d0be0800000000000000
+      internalID: -1509387529414535162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_95
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52c23ed182d60db0800000000000000
+      internalID: -4825938495460425123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_96
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94903dc282e915c50800000000000000
+      internalID: 6652272019990841673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_97
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4ca17e407644e10800000000000000
+      internalID: 2180981390308984029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_98
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc8f706368360f10800000000000000
+      internalID: 2235536264507919576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_99
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5269aa19c006a70800000000000000
+      internalID: 8818061890163189203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_100
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 36
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e796f65686aca840800000000000000
+      internalID: 5236743562639874017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_101
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b51f2d5a29f5d8d0800000000000000
+      internalID: -2822075631130438224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_102
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 4
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818de19404536e350800000000000000
+      internalID: 6045578100012406808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_103
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c722ba96d4aa8be0800000000000000
+      internalID: -1474184686385092665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_104
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d377a31892fd7ed0800000000000000
+      internalID: -2414507090222025772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_105
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a592f981d46396650800000000000000
+      internalID: 6226567664569887066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShmup32x32_106
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 2
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4dccd1def53d5f0800000000000000
+      internalID: -733136842319407924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlayerShmup32x32_0: -7051480301275156021
+      PlayerShmup32x32_1: -3270038215462789446
+      PlayerShmup32x32_10: -3894474117124651123
+      PlayerShmup32x32_100: 5236743562639874017
+      PlayerShmup32x32_101: -2822075631130438224
+      PlayerShmup32x32_102: 6045578100012406808
+      PlayerShmup32x32_103: -1474184686385092665
+      PlayerShmup32x32_104: -2414507090222025772
+      PlayerShmup32x32_105: 6226567664569887066
+      PlayerShmup32x32_106: -733136842319407924
+      PlayerShmup32x32_11: -1451836448397019089
+      PlayerShmup32x32_12: -6061706946242773850
+      PlayerShmup32x32_13: -8790786080340584954
+      PlayerShmup32x32_14: 7574426925385974376
+      PlayerShmup32x32_15: -368385178219706115
+      PlayerShmup32x32_16: 2152208028889805068
+      PlayerShmup32x32_17: -3931701649432165174
+      PlayerShmup32x32_18: 3671798430809312526
+      PlayerShmup32x32_19: -5837750275268536399
+      PlayerShmup32x32_2: -3072745446766358092
+      PlayerShmup32x32_20: -2347581357280178673
+      PlayerShmup32x32_21: -8568216056615919436
+      PlayerShmup32x32_22: 9007765064317936811
+      PlayerShmup32x32_23: 3694871898037943171
+      PlayerShmup32x32_24: -5846252500710611792
+      PlayerShmup32x32_25: 1660555344845321758
+      PlayerShmup32x32_26: 2494282271194005520
+      PlayerShmup32x32_27: 6998160432121303695
+      PlayerShmup32x32_28: -6695104347060675429
+      PlayerShmup32x32_29: -3956748585754686311
+      PlayerShmup32x32_3: 4721466985513437358
+      PlayerShmup32x32_30: 644852096735536966
+      PlayerShmup32x32_31: -5789527498369183417
+      PlayerShmup32x32_32: -8238065432522158474
+      PlayerShmup32x32_33: 3214841688734156424
+      PlayerShmup32x32_34: 3926793932064601668
+      PlayerShmup32x32_35: -5558372407944886232
+      PlayerShmup32x32_36: -8448868647686107162
+      PlayerShmup32x32_37: 3209359166623369728
+      PlayerShmup32x32_38: 7707137326929655967
+      PlayerShmup32x32_39: 2618535884365145433
+      PlayerShmup32x32_4: -6356868913171217451
+      PlayerShmup32x32_40: 3389783160278823962
+      PlayerShmup32x32_41: 8767833101411959834
+      PlayerShmup32x32_42: -6246095921702845717
+      PlayerShmup32x32_43: -1295962058664240808
+      PlayerShmup32x32_44: -7002955861534579941
+      PlayerShmup32x32_45: -2000015526998455744
+      PlayerShmup32x32_46: -2194431807920073800
+      PlayerShmup32x32_47: 4630254550914776572
+      PlayerShmup32x32_48: 3329804789617637534
+      PlayerShmup32x32_49: -5551804673836088259
+      PlayerShmup32x32_5: -373078667638388670
+      PlayerShmup32x32_50: -2153500080689324278
+      PlayerShmup32x32_51: 2186195935164419178
+      PlayerShmup32x32_52: 120733797617284323
+      PlayerShmup32x32_53: -5150764435653828841
+      PlayerShmup32x32_54: 2009273905947015632
+      PlayerShmup32x32_55: 3732418418583923562
+      PlayerShmup32x32_56: -172921736685001717
+      PlayerShmup32x32_57: 1031853520488349855
+      PlayerShmup32x32_58: -6121139662033629270
+      PlayerShmup32x32_59: -6496382399299547356
+      PlayerShmup32x32_6: -982442726158807945
+      PlayerShmup32x32_60: 7877331702216319344
+      PlayerShmup32x32_61: -1338608584213381513
+      PlayerShmup32x32_62: 5704352994181441413
+      PlayerShmup32x32_63: 3087426026090058637
+      PlayerShmup32x32_64: 5532284757179776151
+      PlayerShmup32x32_65: -4084850655694860368
+      PlayerShmup32x32_66: -862163084490533811
+      PlayerShmup32x32_67: -8244899574306360936
+      PlayerShmup32x32_68: -468533517755372942
+      PlayerShmup32x32_69: -2592697061508682920
+      PlayerShmup32x32_7: 46251837462770109
+      PlayerShmup32x32_70: 5838078628454703218
+      PlayerShmup32x32_71: -5381636432213243013
+      PlayerShmup32x32_72: -1292278867011183285
+      PlayerShmup32x32_73: 8785264980381255162
+      PlayerShmup32x32_74: -6394841974553303943
+      PlayerShmup32x32_75: -4399285006050735486
+      PlayerShmup32x32_76: 866868418726541900
+      PlayerShmup32x32_77: 523665267492512525
+      PlayerShmup32x32_78: 5235158587679405585
+      PlayerShmup32x32_79: -4203784354401673589
+      PlayerShmup32x32_8: -7717987814526184605
+      PlayerShmup32x32_80: -5139217972875558045
+      PlayerShmup32x32_81: 1320922543048616
+      PlayerShmup32x32_82: 2094090668785013539
+      PlayerShmup32x32_83: 2416420106300365549
+      PlayerShmup32x32_84: 584372439205115403
+      PlayerShmup32x32_85: -3377672574768200031
+      PlayerShmup32x32_86: 2360154687981966437
+      PlayerShmup32x32_87: 7006623177287855643
+      PlayerShmup32x32_88: 5471473893175807726
+      PlayerShmup32x32_89: -1910952785665189272
+      PlayerShmup32x32_9: -2794558136236293136
+      PlayerShmup32x32_90: 4705810977119355925
+      PlayerShmup32x32_91: -7622774103375598579
+      PlayerShmup32x32_92: 8237162515716792662
+      PlayerShmup32x32_93: 8936109472829716093
+      PlayerShmup32x32_94: -1509387529414535162
+      PlayerShmup32x32_95: -4825938495460425123
+      PlayerShmup32x32_96: 6652272019990841673
+      PlayerShmup32x32_97: 2180981390308984029
+      PlayerShmup32x32_98: 2235536264507919576
+      PlayerShmup32x32_99: 8818061890163189203
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
