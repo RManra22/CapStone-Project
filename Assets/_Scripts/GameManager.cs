@@ -74,13 +74,13 @@ public class GameManager : MonoBehaviour {
   }
 
   // Refresh life icons — active icons = remaining lives, inactive = lost lives
-  private void UpdateLivesUI() {
+  public void UpdateLivesUI() {
     if (lifeIcons == null) return;
     for (int i = 0; i < lifeIcons.Length; i++) {
-      if (lifeIcons[i] != null)
-        lifeIcons[i].SetActive(i < currentLives);
+        if (lifeIcons[i] != null)
+            lifeIcons[i].SetActive(i < currentLives);
     }
-  }
+}
 
   // Called by Player when it is destroyed. Deducts a life and either respawns or ends the game.
   public void OnPlayerDied() {
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour {
 
     levelText.text = "Level " + level;
 
-    bool isBossLevel = level % 3 == 0;
+    bool isBossLevel = level % 1 == 0;
 
     if (level >= 1) {
       levelCompleteText.gameObject.SetActive(true);
@@ -195,17 +195,27 @@ public class GameManager : MonoBehaviour {
 
   public void GameOver() {
     if (currentScore > PlayerPrefs.GetInt("HighScore", 0)) {
-      PlayerPrefs.SetInt("HighScore", currentScore);
-      PlayerPrefs.Save();
+        PlayerPrefs.SetInt("HighScore", currentScore);
+        PlayerPrefs.Save();
     }
+
+    // Calculate and add credits
+    int creditsEarned = currentScore / 100;
+    int totalCredits = PlayerPrefs.GetInt("TotalCredits", 0) + creditsEarned;
+    PlayerPrefs.SetInt("TotalCredits", totalCredits);
+    PlayerPrefs.SetInt("CreditsEarned", creditsEarned);
+
+    PlayerPrefs.SetInt("LastScore", currentScore);
+    PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
+    PlayerPrefs.Save();
     StartCoroutine(Restart());
-  }
+}
 
   private IEnumerator Restart() {
     Debug.Log("Game Over - Final Score: " + currentScore);
     yield return new WaitForSeconds(2f);
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-  }
+    SceneManager.LoadScene("GameOver");
+}
 
   public void PauseGame() {
     isPaused = true;

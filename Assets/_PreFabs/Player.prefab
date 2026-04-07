@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3127525956327586098}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,6 +224,10 @@ MonoBehaviour:
   bulletSpawn: {fileID: 4694419298953805253}
   bulletPrefab: {fileID: 3815930869351626043, guid: a3369de936946364e8bb24ee35f5e93c, type: 3}
   destroyedParticles: {fileID: 2073316840830977708, guid: 76968e30eab311848a53795db83af44d, type: 3}
+  invincibilityDuration: 3
+  flashInterval: 0.15
+  fastShootDuration: 8
+  fastShootMultiplier: 0.35
 --- !u!114 &5908078770941377494
 MonoBehaviour:
   m_ObjectHideFlags: 0
