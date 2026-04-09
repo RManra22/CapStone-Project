@@ -1,0 +1,85 @@
+/* ── Root panel ─────────────────────────────────────────────── */
+#SettingsContent {
+    padding: 16px;
+}
+
+.unity-visual-element {
+    /* outer centering wrapper — keep transparent */
+}
+
+/* ── Panel background ───────────────────────────────────────── */
+/* The second VisualElement (the gray box) */
+.unity-visual-element > .unity-visual-element {
+    background-color: rgba(15, 25, 60, 0.92);
+    border-color: rgb(60, 130, 220);
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* ── Title ──────────────────────────────────────────────────── */
+#labelSettingsTitle {
+    -unity-text-align: upper-center;
+    font-size: 37px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    -unity-font-style: bold;
+}
+
+/* ── Section label (Volume) ─────────────────────────────────── */
+#labelVolume {
+    font-size: 26px;
+    color: rgb(160, 200, 255);
+    margin-bottom: 6px;
+    -unity-font-style: bold;
+}
+
+/* ── All sliders ────────────────────────────────────────────── */
+.unity-slider {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Slider label (Master / Music / Sound Effects) */
+.unity-slider > .unity-base-field__label {
+    font-size: 21px;
+    color: rgb(200, 225, 255);
+    min-width: 120px;
+}
+
+/* Track background */
+.unity-slider__tracker {
+    background-color: rgb(20, 40, 90);
+    border-color: rgb(60, 100, 180);
+    border-width: 1px;
+    border-radius: 4px;
+    height: 6px;
+}
+
+/* Fill (progress portion) */
+.unity-slider__drag-container > .unity-slider__tracker {
+    background-color: rgb(20, 40, 90);
+}
+
+/* Handle (the draggable knob) */
+.unity-slider__dragger {
+    background-color: rgb(255, 160, 40);
+    border-color: rgb(255, 200, 80);
+    border-width: 2px;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    margin-top: -5px;
+}
+
+/* Handle hover state */
+.unity-slider__dragger:hover {
+    background-color: rgb(255, 200, 80);
+    border-color: rgb(255, 255, 150);
+}
+
+/* Handle active/pressed state */
+.unity-slider__dragger:active {
+    background-color: rgb(220, 120, 20);
+    border-color: rgb(255, 160, 40);
+}
