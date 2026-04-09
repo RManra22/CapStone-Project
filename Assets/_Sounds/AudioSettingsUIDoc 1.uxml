@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Sounds/CustomeSlider.uss?fileID=7433441132597879392&amp;guid=a957ba5b298ce2f4897f53683137c305&amp;type=3" />
+    <ui:VisualElement style="flex-grow: 1; align-items: stretch; justify-content: center; align-self: center; background-color: rgba(58, 121, 187, 0); width: 50%; height: 50%; flex-direction: row;">
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(217, 217, 217, 0); align-self: center; height: auto;">
+            <ui:Label text="Settings" name="labelSettingsTitle" style="-unity-text-align: upper-center; font-size: 37px; display: none; visibility: visible;" />
+            <ui:VisualElement name="SettingsContent" style="flex-grow: 1;">
+                <ui:Label text="Volume" name="labelVolume" style="font-size: 26px; display: none;" />
+                <ui:Slider label="Master" value="42" high-value="100" name="sliderMaster" style="font-size: 21px; background-image: url(&quot;project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=-1316949199&amp;guid=a4499190c14b1ae4986b24782ec87a40&amp;type=3#SpaceShooterAssetPack_IU_46&quot;); opacity: 1; display: flex; width: auto; height: 50px; overflow: visible; -unity-text-outline-color: rgba(0, 0, 0, 0); -unity-text-outline-width: 3387px; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255);" />
+                <ui:Slider label="Music" value="42" high-value="100" name="sliderMusic" style="font-size: 21px; height: 50px;" />
+                <ui:Slider label="Sound Effects" value="42" high-value="100" name="sliderSFX" style="font-size: 21px; background-image: url(&quot;project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=-1316949199&amp;guid=a4499190c14b1ae4986b24782ec87a40&amp;type=3#SpaceShooterAssetPack_IU_46&quot;); height: 50px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
