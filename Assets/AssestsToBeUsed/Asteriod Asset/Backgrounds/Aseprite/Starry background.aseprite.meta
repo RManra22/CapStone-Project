@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 639116022410454276
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -152,9 +152,9 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
+      x: 6
       y: 4
-      width: 642
+      width: 640
       height: 360
     spriteID: 0c06dfa334da7da4c8fe79a824dda332
     spriteBone: []
@@ -414,6 +414,30 @@ ScriptedImporter:
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
