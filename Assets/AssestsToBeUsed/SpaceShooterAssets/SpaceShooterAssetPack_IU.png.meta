@@ -631,7 +631,7 @@ TextureImporter:
         serializedVersion: 2
         x: 125
         y: 29
-        width: 36
+        width: 12
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1312,9 +1312,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 75
-        width: 34
-        height: 37
+        y: 17
+        width: 16
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1325,6 +1325,50 @@ TextureImporter:
       bones: []
       spriteID: 82a52373cea3d8048ad80be44fe7fa25
       internalID: -1603490312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_IU_51
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 29
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee25996eb5375ae42a752242dfb5dd7b
+      internalID: -1143350990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_IU_52
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 29
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7a50dbd3013394f9664d93a076a7d4
+      internalID: -2112792874
       vertices: []
       indices: 
       edges: []
@@ -1390,6 +1434,8 @@ TextureImporter:
       SpaceShooterAssetPack_IU_49: -1702615082
       SpaceShooterAssetPack_IU_5: -223824773378648341
       SpaceShooterAssetPack_IU_50: -1603490312
+      SpaceShooterAssetPack_IU_51: -1143350990
+      SpaceShooterAssetPack_IU_52: -2112792874
       SpaceShooterAssetPack_IU_6: 2142168787390626652
       SpaceShooterAssetPack_IU_7: 1843883542749878518
       SpaceShooterAssetPack_IU_8: 5224479735999471245
