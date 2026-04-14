@@ -13,11 +13,11 @@
 
 #sliderMaster #unity-dragger {
     visibility: visible;
-    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=3360235435781677770&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_14");
-    width: 38px;
-    height: 40px;
+    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=3360235435781677770&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_14");
+    width: 50px;
+    height: 50px;
     position: relative;
-    top: 13px;
+    top: 20px;
     background-color: rgba(56, 56, 56, 0);
     -unity-slice-left: -284;
     -unity-slice-top: -284;
@@ -38,7 +38,7 @@
 
 #sliderMusic {
     display: flex;
-    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=-1316949199&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_46");
+    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=-1316949199&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_46");
 }
 
 #sliderMusic Label {
@@ -48,7 +48,7 @@
 #sliderMusic #unity-tracker {
     display: flex;
     visibility: hidden;
-    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=-1316949199&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_46");
+    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=-1316949199&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_46");
     background-color: rgba(255, 255, 255, 0);
     -unity-background-image-tint-color: rgb(255, 255, 255);
     overflow: visible;
@@ -56,11 +56,11 @@
 
 #sliderMusic #unity-dragger {
     visibility: visible;
-    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=3360235435781677770&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_14");
-    width: 38px;
-    height: 40px;
+    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=3360235435781677770&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_14");
+    width: 50px;
+    height: 50px;
     position: relative;
-    top: 13px;
+    top: 20px;
     background-color: rgba(56, 56, 56, 0);
     -unity-slice-left: -284;
     -unity-slice-top: -284;
@@ -94,11 +94,11 @@
 
 #sliderSFX #unity-dragger {
     visibility: visible;
-    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssetPack/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=3360235435781677770&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_14");
-    width: 38px;
-    height: 40px;
+    background-image: url("project://database/Assets/AssestsToBeUsed/SpaceShooterAssets/SpaceShooterAssetPack_IU.png?fileID=3360235435781677770&guid=a4499190c14b1ae4986b24782ec87a40&type=3#SpaceShooterAssetPack_IU_14");
+    width: 50px;
+    height: 50px;
     position: relative;
-    top: 13px;
+    top: 20px;
     background-color: rgba(56, 56, 56, 0);
     -unity-slice-left: -284;
     -unity-slice-top: -284;
