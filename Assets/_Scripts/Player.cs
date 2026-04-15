@@ -162,7 +162,13 @@ public class Player : MonoBehaviour {
     if (!isAlive || isInvincible) return;
     if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet") || collision.CompareTag("Boss")) {
       isAlive = false;
-      GameManager.Instance.OnPlayerDied();
+      
+    if (GameManager.Instance != null)
+            GameManager.Instance.OnPlayerDied();
+    else if (ClassicGameManager.Instance != null)
+            ClassicGameManager.Instance.OnPlayerDied();
+
+
       Instantiate(destroyedParticles, transform.position, Quaternion.identity);
       Destroy(gameObject);
     }

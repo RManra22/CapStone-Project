@@ -35,6 +35,7 @@ public class HealthPack : MonoBehaviour {
         transform.position = Camera.main.ViewportToWorldPoint(vp);
     }
 
+    // When player collides with the health pack, heal them once and destroy the pack
     private void OnTriggerEnter2D(Collider2D collision) {
     if (collision.CompareTag("Player")) {
         GameManager gm = GameManager.Instance;

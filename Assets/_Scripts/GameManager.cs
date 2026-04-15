@@ -178,6 +178,7 @@ public class GameManager : MonoBehaviour {
     return Camera.main.ViewportToWorldPoint(viewportPos);
   }
 
+// Called by Asteroid when destroyed to add points and check for high score updates
   public void AddScore(int asteroidSize) {
     int points = 0;
     if (asteroidSize == 3)      points = largeAsteroidPoints;
@@ -207,6 +208,7 @@ public class GameManager : MonoBehaviour {
 
     PlayerPrefs.SetInt("LastScore", currentScore);
     PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
+    PlayerPrefs.SetString("LastHighScoreKey", "HighScore");
     PlayerPrefs.Save();
     StartCoroutine(Restart());
 }

@@ -10,7 +10,8 @@ public class GameOverScreen : MonoBehaviour {
 
     private void Start() {
         int finalScore = PlayerPrefs.GetInt("LastScore", 0);
-        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        string highScoreKey = PlayerPrefs.GetString("LastHighScoreKey", "HighScore");
+        int highScore = PlayerPrefs.GetInt(highScoreKey, 0);
         int creditsEarned = PlayerPrefs.GetInt("CreditsEarned", 0);
         int totalCredits = PlayerPrefs.GetInt("TotalCredits", 0);
 
