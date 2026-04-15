@@ -8,10 +8,15 @@ public class ButtonManager : MonoBehaviour
     // This script is responsible for allowing the player to navigate the menus as per the functional requirements. 
     public void LoadScene(string sceneName) // load the correct scene based on the name given
     {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
 
-        loadingUI.SetActive(true); // Show the loading UI
+    public void LoadSceneWithLoadingScreen(string sceneName) // load the correct scene based on the name given
+    {
+       loadingUI.SetActive(true); // Show the loading UI
         StartCoroutine(LoadAsync(sceneName));
     }
+
     IEnumerator LoadAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
