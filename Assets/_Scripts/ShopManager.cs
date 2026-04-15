@@ -40,30 +40,23 @@ public class ShopManager : MonoBehaviour {
     private void RefreshUI() {
         creditsText.text = "Credits: " + totalCredits;
 
-        // Current selected style
         int selected = PlayerPrefs.GetInt("SelectedShootingStyle", 1);
         selectedStyleText.text = "Active: " + GetStyleName(selected);
 
         // Spread shot
-        if (hasSpread) {
-            spreadStatusText.text = "Owned";
-            spreadBuyButton.interactable = false;
-            spreadSelectButton.interactable = true;
-        } else {
+        spreadBuyButton.gameObject.SetActive(!hasSpread);
+        spreadSelectButton.gameObject.SetActive(hasSpread);
+        if (!hasSpread) {
             spreadStatusText.text = spreadShotCost + " credits";
             spreadBuyButton.interactable = totalCredits >= spreadShotCost;
-            spreadSelectButton.interactable = false;
         }
 
         // Burst shot
-        if (hasBurst) {
-            burstStatusText.text = "Owned";
-            burstBuyButton.interactable = false;
-            burstSelectButton.interactable = true;
-        } else {
+        burstBuyButton.gameObject.SetActive(!hasBurst);
+        burstSelectButton.gameObject.SetActive(hasBurst);
+        if (!hasBurst) {
             burstStatusText.text = burstShotCost + " credits";
             burstBuyButton.interactable = totalCredits >= burstShotCost;
-            burstSelectButton.interactable = false;
         }
     }
 
