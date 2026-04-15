@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
   private float nextFireTime = 0f;
 
   // Shooting styles: 1 = Single, 2 = Spread, 3 = Burst
-  [SerializeField] private int currentShootingStyle = 1;
+  private int currentShootingStyle = 1;
 
   [Header("Object references")]
   [SerializeField] private Transform bulletSpawn;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour {
 
   [Header("Powerups")]
   [SerializeField] private float fastShootDuration = 8f;
-  [SerializeField] private float fastShootMultiplier = 0.35f; // fire rate multiplier while active
+  [SerializeField] private float fastShootMultiplier = 0.35f;
   private float baseFireRateMultiplier = 1f;
 
   private PlayerInput playerInput;
@@ -45,14 +45,12 @@ public class Player : MonoBehaviour {
     playerInput = GetComponent<PlayerInput>();
     spriteRenderer = GetComponent<SpriteRenderer>();
 
-    if (currentShootingStyle < 1 || currentShootingStyle > 3)
-      currentShootingStyle = 1;
+    // Load the style the player selected from the shop/inventory
+    currentShootingStyle = PlayerPrefs.GetInt("SelectedShootingStyle", 1);
 
-    // Always start with invincibility
     StartCoroutine(RespawnInvincibility());
   }
 
-  // Flashes the sprite and blocks damage for invincibilityDuration seconds.
   private IEnumerator RespawnInvincibility() {
     isInvincible = true;
     float elapsed = 0f;
@@ -63,7 +61,6 @@ public class Player : MonoBehaviour {
       elapsed += flashInterval;
     }
 
-    // Ensure we end fully visible
     spriteRenderer.enabled = true;
     isInvincible = false;
   }
@@ -73,7 +70,6 @@ public class Player : MonoBehaviour {
       HandleShipAcceleration();
       HandleShipRotation();
       HandleShooting();
-      HandleShootingStyleSwitch();
     }
   }
 
@@ -93,26 +89,6 @@ public class Player : MonoBehaviour {
       transform.Rotate(shipRotationSpeed * Time.deltaTime * transform.forward);
     } else if (playerInput.actions["TurnRight"].ReadValue<Vector2>().x > 0) {
       transform.Rotate(-shipRotationSpeed * Time.deltaTime * transform.forward);
-    }
-  }
-
-  private void HandleShootingStyleSwitch() {
-    if (Input.GetKeyDown(KeyCode.Q)) {
-      currentShootingStyle++;
-      if (currentShootingStyle > 3) currentShootingStyle = 1;
-      Debug.Log("Shooting Style: " + GetShootingStyleName());
-    }
-    if (Input.GetKeyDown(KeyCode.Alpha1)) currentShootingStyle = 1;
-    if (Input.GetKeyDown(KeyCode.Alpha2)) currentShootingStyle = 2;
-    if (Input.GetKeyDown(KeyCode.Alpha3)) currentShootingStyle = 3;
-  }
-
-  private string GetShootingStyleName() {
-    switch (currentShootingStyle) {
-      case 1: return "Single Shot";
-      case 2: return "Triple Spread";
-      case 3: return "Burst Shot";
-      default: return "Unknown";
     }
   }
 
@@ -136,15 +112,13 @@ public class Player : MonoBehaviour {
     }
   }
 
-  // Called by the Powerup when the player collects it
   public void ApplyFastShootPowerup() {
-    StopCoroutine(nameof(FastShootTimer)); // cancel existing powerup if already active
+    StopCoroutine(nameof(FastShootTimer));
     StartCoroutine(nameof(FastShootTimer));
   }
 
   private IEnumerator FastShootTimer() {
     baseFireRateMultiplier = fastShootMultiplier;
-    // TODO: show a powerup active indicator in UI
     yield return new WaitForSeconds(fastShootDuration);
     baseFireRateMultiplier = 1f;
   }
@@ -187,10 +161,10 @@ public class Player : MonoBehaviour {
   private void OnTriggerEnter2D(Collider2D collision) {
     if (!isAlive || isInvincible) return;
     if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet") || collision.CompareTag("Boss")) {
-        isAlive = false;
-        GameManager.Instance.OnPlayerDied();
-        Instantiate(destroyedParticles, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+      isAlive = false;
+      GameManager.Instance.OnPlayerDied();
+      Instantiate(destroyedParticles, transform.position, Quaternion.identity);
+      Destroy(gameObject);
     }
-}
+  }
 }
