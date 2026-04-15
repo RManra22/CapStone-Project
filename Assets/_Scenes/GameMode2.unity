@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 6403052524635954951, guid: dc47b7d0160e27a4f92b26ea52eac188, type: 3}
-  asteroidsOnScreen: 4
+  asteroidsOnScreen: 5
   asteroidCount: 0
   currentScore: 0
   highScore: 0
