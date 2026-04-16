@@ -8,23 +8,34 @@ public class ButtonManager : MonoBehaviour
     // This script is responsible for allowing the player to navigate the menus as per the functional requirements. 
     public void LoadScene(string sceneName) // load the correct scene based on the name given
     {
+        Time.timeScale = 1f; // Ensure time is running at normal speed when loading a new scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
     public void LoadSceneWithLoadingScreen(string sceneName) // load the correct scene based on the name given
     {
+       Time.timeScale = 1f; // Ensure time is running at normal speed when loading a new scene
        loadingUI.SetActive(true); // Show the loading UI
-        StartCoroutine(LoadAsync(sceneName));
+       StartCoroutine(LoadAsync(sceneName));
     }
 
     IEnumerator LoadAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false; // Prevent the scene from activating immediately
 
-        // Wait until the asynchronous scene fully loads
-        while (!operation.isDone)
+        float minimumLoadingTime = 1f; // Minimum time to show the loading screen
+        float elapsedTime = 0f;
+
+        while (elapsedTime < minimumLoadingTime || !operation.isDone)
         {
-            yield return null;
+            elapsedTime += Time.deltaTime;
+            // Scene is ready but we're still waiting for minimum time
+            if (operation.progress >= 0.9f && elapsedTime >= minimumLoadingTime)
+            {
+                operation.allowSceneActivation = true; // Now let the scene load
+            }
+            yield return null; // Wait for the next frame
         }
     }
 
@@ -38,5 +49,10 @@ public class ButtonManager : MonoBehaviour
     public void UnpauseGame()
     {
         GameManager.Instance.ResumeGame();
+    }
+
+    public void UnpauseGameClassic()
+    {
+        ClassicGameManager.Instance.ResumeGame();
     }
 }
