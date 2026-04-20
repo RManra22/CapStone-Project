@@ -30,8 +30,12 @@ public class Player : MonoBehaviour {
     [Header("Powerups")]
     [SerializeField] private float fastShootDuration = 8f;
     [SerializeField] private float fastShootMultiplier = 0.35f;
+    [SerializeField] private float homingDuration = 8f;
+    [SerializeField] private Rigidbody2D homingBulletPrefab;
     private float baseFireRateMultiplier = 1f;
     private Coroutine fastShootCoroutine;
+    private bool isHoming = false;
+    private Coroutine homingCoroutine;
 
     private PlayerInput playerInput;
     private Rigidbody2D shipRigidbody;
@@ -44,10 +48,7 @@ public class Player : MonoBehaviour {
         shipRigidbody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Always start with single shot — no shop loading
         currentShootingStyle = 1;
-
         StartCoroutine(RespawnInvincibility());
     }
 
@@ -109,11 +110,9 @@ public class Player : MonoBehaviour {
         }
     }
 
-    // Called by Powerup.cs — handles all three powerup types
     public void ApplyPowerup(PowerupType type) {
         switch (type) {
             case PowerupType.SpreadShot:
-                // Cancel fast shoot if active, reset its multiplier
                 CancelFastShoot();
                 currentShootingStyle = 2;
                 break;
@@ -122,10 +121,14 @@ public class Player : MonoBehaviour {
                 currentShootingStyle = 3;
                 break;
             case PowerupType.FastShoot:
-                // Resets and restarts the timer even if already active
                 if (fastShootCoroutine != null)
                     StopCoroutine(fastShootCoroutine);
                 fastShootCoroutine = StartCoroutine(FastShootTimer());
+                break;
+            case PowerupType.HomingShot:
+                if (homingCoroutine != null)
+                    StopCoroutine(homingCoroutine);
+                homingCoroutine = StartCoroutine(HomingTimer());
                 break;
         }
     }
@@ -143,6 +146,13 @@ public class Player : MonoBehaviour {
         yield return new WaitForSeconds(fastShootDuration);
         baseFireRateMultiplier = 1f;
         fastShootCoroutine = null;
+    }
+
+    private IEnumerator HomingTimer() {
+        isHoming = true;
+        yield return new WaitForSeconds(homingDuration);
+        isHoming = false;
+        homingCoroutine = null;
     }
 
     private void ShootSingle() {
@@ -163,11 +173,16 @@ public class Player : MonoBehaviour {
     }
 
     private void FireBullet(Vector2 direction) {
-        Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-        Vector2 shipVelocity = shipRigidbody.linearVelocity;
-        float shipForwardSpeed = Mathf.Max(0f, Vector2.Dot(shipVelocity, (Vector2)transform.up));
-        bullet.linearVelocity = direction.normalized * shipForwardSpeed;
-        bullet.AddForce(bulletSpeed * direction.normalized, ForceMode2D.Impulse);
+        if (isHoming && homingBulletPrefab != null) {
+            Rigidbody2D bullet = Instantiate(homingBulletPrefab, bulletSpawn.position, Quaternion.identity);
+            bullet.linearVelocity = direction.normalized * 8f;
+        } else {
+            Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
+            Vector2 shipVelocity = shipRigidbody.linearVelocity;
+            float shipForwardSpeed = Mathf.Max(0f, Vector2.Dot(shipVelocity, (Vector2)transform.up));
+            bullet.linearVelocity = direction.normalized * shipForwardSpeed;
+            bullet.AddForce(bulletSpeed * direction.normalized, ForceMode2D.Impulse);
+        }
     }
 
     private Vector2 Rotate2D(Vector2 vector, float degrees) {

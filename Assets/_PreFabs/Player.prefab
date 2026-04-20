@@ -220,7 +220,6 @@ MonoBehaviour:
   singleShotFireRate: 0.5
   spreadFireRate: 1
   burstFireRate: 0.8
-  currentShootingStyle: 0
   bulletSpawn: {fileID: 4694419298953805253}
   bulletPrefab: {fileID: 3815930869351626043, guid: a3369de936946364e8bb24ee35f5e93c, type: 3}
   destroyedParticles: {fileID: 2073316840830977708, guid: 76968e30eab311848a53795db83af44d, type: 3}
@@ -228,6 +227,8 @@ MonoBehaviour:
   flashInterval: 0.15
   fastShootDuration: 8
   fastShootMultiplier: 0.35
+  homingDuration: 8
+  homingBulletPrefab: {fileID: 7831337055689602689, guid: 3a9120d349f2a403589db0d8824799a0, type: 3}
 --- !u!114 &5908078770941377494
 MonoBehaviour:
   m_ObjectHideFlags: 0

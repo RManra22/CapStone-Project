@@ -9,6 +9,7 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private Sprite spreadSprite;
     [SerializeField] private Sprite burstSprite;
     [SerializeField] private Sprite fastShootSprite;
+    [SerializeField] private Sprite homingSprite;
 
     private Vector2 driftDirection;
     private PowerupType powerupType;
@@ -25,6 +26,7 @@ public class Powerup : MonoBehaviour {
                 case PowerupType.SpreadShot: if (spreadSprite)    sr.sprite = spreadSprite;    break;
                 case PowerupType.BurstShot:  if (burstSprite)     sr.sprite = burstSprite;     break;
                 case PowerupType.FastShoot:  if (fastShootSprite) sr.sprite = fastShootSprite; break;
+                case PowerupType.HomingShot: if (homingSprite)    sr.sprite = homingSprite;    break;
             }
         }
 
