@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Asteroid asteroidPrefab; 
   [SerializeField] private Boss bossPrefab;
   [SerializeField] private Powerup powerupPrefab;
-  [SerializeField] private float powerupSpawnInterval = 5f;
+  [SerializeField] private float powerupSpawnInterval = 10f;
 
   public int asteroidCount = 0;
   private int level = 0;

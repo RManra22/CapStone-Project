@@ -30,7 +30,7 @@ public class Player : MonoBehaviour {
     [Header("Powerups")]
     [SerializeField] private float fastShootDuration = 8f;
     [SerializeField] private float fastShootMultiplier = 0.35f;
-    [SerializeField] private float homingDuration = 8f;
+    [SerializeField] private float homingDuration = 4f;
     [SerializeField] private Rigidbody2D homingBulletPrefab;
     private float baseFireRateMultiplier = 1f;
     private Coroutine fastShootCoroutine;
