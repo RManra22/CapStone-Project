@@ -5,8 +5,6 @@ using TMPro;
 public class GameOverScreen : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI finalScoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
-    [SerializeField] private TextMeshProUGUI creditsEarnedText;
-    [SerializeField] private TextMeshProUGUI totalCreditsText;
 
     private void Start() {
         int finalScore = PlayerPrefs.GetInt("LastScore", 0);
@@ -17,8 +15,6 @@ public class GameOverScreen : MonoBehaviour {
 
         finalScoreText.text = "Score: " + finalScore;
         highScoreText.text = "Best: " + highScore;
-        creditsEarnedText.text = "Credits Earned: +" + creditsEarned;
-        totalCreditsText.text = "Total Credits: " + totalCredits;
     }
 
     public void PlayAgain() {
