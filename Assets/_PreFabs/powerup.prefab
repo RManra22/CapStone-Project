@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,9 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driftSpeed: 1.5
-  bobAmplitude: 0.2
-  bobFrequency: 2
   lifetime: 10
+  spreadSprite: {fileID: -6090531487598045253, guid: 886cac7d172e0774facdf9c833ffa72a, type: 3}
+  burstSprite: {fileID: 6998160432121303695, guid: 806a88b9eac0c1c44be85d460c2e6f56, type: 3}
+  fastShootSprite: {fileID: 7366359900140411234, guid: 0bbafeaf0e19ced4ba16f54573c748a1, type: 3}
 --- !u!58 &6576202341564121546
 CircleCollider2D:
   m_ObjectHideFlags: 0

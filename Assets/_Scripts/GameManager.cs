@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Asteroid asteroidPrefab; 
   [SerializeField] private Boss bossPrefab;
   [SerializeField] private Powerup powerupPrefab;
-  [SerializeField] private float powerupSpawnInterval = 30f;
+  [SerializeField] private float powerupSpawnInterval = 5f;
 
   public int asteroidCount = 0;
   private int level = 0;
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour {
 
     levelText.text = "Level " + level;
 
-    bool isBossLevel = level % 1 == 0;
+    bool isBossLevel = level % 2 == 0;
 
     if (level >= 1) {
       levelCompleteText.gameObject.SetActive(true);

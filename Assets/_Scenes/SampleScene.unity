@@ -820,7 +820,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 6403052524635954951, guid: dc47b7d0160e27a4f92b26ea52eac188, type: 3}
   bossPrefab: {fileID: 5191286952561189786, guid: 9eaaf8b230e434c5485b9b80063df818, type: 3}
   powerupPrefab: {fileID: 5689607931432280521, guid: 9deb6a5f94f9a4376816f63bc0908066, type: 3}
-  powerupSpawnInterval: 30
+  powerupSpawnInterval: 3
   asteroidCount: 0
   currentScore: 0
   highScore: 0
@@ -3248,7 +3248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2359514702351982607, guid: 35411391fa3664ef4803141599db6e6e, type: 3}
       propertyPath: shipMaxVelocity
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2359514702351982607, guid: 35411391fa3664ef4803141599db6e6e, type: 3}
       propertyPath: shipAcceleration
