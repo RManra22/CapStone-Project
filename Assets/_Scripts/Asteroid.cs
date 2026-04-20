@@ -8,7 +8,7 @@ public class Asteroid : MonoBehaviour {
     public ClassicGameManager classicGameManager;
 
     private void Start() {
-        transform.localScale = 0.5f * size * Vector3.one;
+        transform.localScale = 0.4f * size * Vector3.one;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         Vector2 direction = new Vector2(Random.value, Random.value).normalized;
