@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Powerup powerupPrefab;
   [SerializeField] private float powerupSpawnInterval = 10f;
 
+
   public int asteroidCount = 0;
   private int level = 0;
   private int bossesDefeated = 0;

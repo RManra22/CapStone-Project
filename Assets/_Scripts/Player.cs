@@ -13,6 +13,9 @@ public class Player : MonoBehaviour {
     [SerializeField] private float singleShotFireRate = 0.5f;
     [SerializeField] private float spreadFireRate = 1f;
     [SerializeField] private float burstFireRate = 0.8f;
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioSource audioSource;
     private float nextFireTime = 0f;
 
     // Shooting styles: 1 = Single, 2 = Spread, 3 = Burst
@@ -98,14 +101,20 @@ public class Player : MonoBehaviour {
             case 1:
                 ShootSingle();
                 nextFireTime = Time.time + singleShotFireRate * baseFireRateMultiplier;
+                audioSource.clip = shootSound;
+                audioSource.Play();
                 break;
             case 2:
                 ShootSpread();
                 nextFireTime = Time.time + spreadFireRate * baseFireRateMultiplier;
+                audioSource.clip = shootSound;
+                audioSource.Play();
                 break;
             case 3:
                 StartCoroutine(ShootBurst());
                 nextFireTime = Time.time + burstFireRate * baseFireRateMultiplier;
+                audioSource.clip = shootSound;
+                audioSource.Play();
                 break;
         }
     }
@@ -199,6 +208,11 @@ public class Player : MonoBehaviour {
         if (!isAlive || isInvincible) return;
         if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet") || collision.CompareTag("Boss")) {
             isAlive = false;
+            audioSource.clip = deathSound;
+            audioSource.Play();
+
+            spriteRenderer.enabled = false;
+            GetComponent<Collider2D>().enabled = false;
 
             if (GameManager.Instance != null)
                 GameManager.Instance.OnPlayerDied();
@@ -206,7 +220,7 @@ public class Player : MonoBehaviour {
                 ClassicGameManager.Instance.OnPlayerDied();
 
             Instantiate(destroyedParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(gameObject, deathSound.length);
         }
     }
 }

@@ -51,10 +51,4 @@ public class AudioManager : MonoBehaviour
       _musicSource.Play();
     }
   }
-  
-  // Update is called once per frame
-  void Update()
-  {
-
-  }
 }

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour {
     [SerializeField] private ParticleSystem destroyedParticles;
+    [SerializeField] private AudioClip destroyedSound;
+    [SerializeField] private AudioSource audioSource;
     public int size = 3;
 
     public GameManager gameManager;
@@ -31,6 +33,12 @@ public class Asteroid : MonoBehaviour {
                 classicGameManager.AddScore(size);
             }
 
+            audioSource.clip = destroyedSound;
+            audioSource.Play();
+       
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+
             collision.gameObject.SetActive(false);
             Destroy(collision.gameObject, 0.1f);
 
@@ -41,7 +49,15 @@ public class Asteroid : MonoBehaviour {
                     newAsteroid.size = size - 1;
                     newAsteroid.gameManager = gameManager;
                     newAsteroid.classicGameManager = classicGameManager;
+
+                    newAsteroid.GetComponent<SpriteRenderer>().enabled = true;
+                    newAsteroid.GetComponent<Collider2D>().enabled = true;
+                    newAsteroid.GetComponent<AudioSource>().volume = 1f;
                 }
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(destroyedSound, transform.position, 20f);
             }
 
             Instantiate(destroyedParticles, transform.position, Quaternion.identity);
