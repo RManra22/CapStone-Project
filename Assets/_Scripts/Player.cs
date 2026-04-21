@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
     [Header("Ship parameters")]
-    [SerializeField] private float shipAcceleration = 5f;
-    [SerializeField] private float shipMaxVelocity = 4f;
+    [SerializeField] private float shipAcceleration = 2f;
+    [SerializeField] private float shipMaxVelocity = 2f;
     [SerializeField] private float shipRotationSpeed = 180f;
     [SerializeField] private float bulletSpeed = 4f;
 
@@ -35,10 +35,14 @@ public class Player : MonoBehaviour {
     [SerializeField] private float fastShootMultiplier = 0.35f;
     [SerializeField] private float homingDuration = 4f;
     [SerializeField] private Rigidbody2D homingBulletPrefab;
+    [SerializeField] private float speedBoostDuration = 8f;
+    [SerializeField] private float boostedAcceleration = 4f;
+    [SerializeField] private float boostedMaxVelocity = 5f;
     private float baseFireRateMultiplier = 1f;
     private Coroutine fastShootCoroutine;
     private bool isHoming = false;
     private Coroutine homingCoroutine;
+    private Coroutine speedBoostCoroutine;
 
     private PlayerInput playerInput;
     private Rigidbody2D shipRigidbody;
@@ -139,6 +143,11 @@ public class Player : MonoBehaviour {
                     StopCoroutine(homingCoroutine);
                 homingCoroutine = StartCoroutine(HomingTimer());
                 break;
+            case PowerupType.SpeedBoost:
+                if (speedBoostCoroutine != null)
+                    StopCoroutine(speedBoostCoroutine);
+                speedBoostCoroutine = StartCoroutine(SpeedBoostTimer());
+                break;
         }
     }
 
@@ -162,6 +171,15 @@ public class Player : MonoBehaviour {
         yield return new WaitForSeconds(homingDuration);
         isHoming = false;
         homingCoroutine = null;
+    }
+
+    private IEnumerator SpeedBoostTimer() {
+        shipAcceleration = boostedAcceleration;
+        shipMaxVelocity = boostedMaxVelocity;
+        yield return new WaitForSeconds(speedBoostDuration);
+        shipAcceleration = 2f;
+        shipMaxVelocity = 2f;
+        speedBoostCoroutine = null;
     }
 
     private void ShootSingle() {

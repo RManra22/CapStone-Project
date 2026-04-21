@@ -10,6 +10,7 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private Sprite burstSprite;
     [SerializeField] private Sprite fastShootSprite;
     [SerializeField] private Sprite homingSprite;
+    [SerializeField] private Sprite speedBoostSprite;
 
     private Vector2 driftDirection;
     private PowerupType powerupType;
@@ -18,15 +19,18 @@ public class Powerup : MonoBehaviour {
     private void Start() {
         mainCamera = Camera.main;
 
-        powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
+
+        powerupType = PowerupType.SpeedBoost;
+        //powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) {
             switch (powerupType) {
-                case PowerupType.SpreadShot: if (spreadSprite)    sr.sprite = spreadSprite;    break;
-                case PowerupType.BurstShot:  if (burstSprite)     sr.sprite = burstSprite;     break;
-                case PowerupType.FastShoot:  if (fastShootSprite) sr.sprite = fastShootSprite; break;
-                case PowerupType.HomingShot: if (homingSprite)    sr.sprite = homingSprite;    break;
+                case PowerupType.SpreadShot:  if (spreadSprite)     sr.sprite = spreadSprite;     break;
+                case PowerupType.BurstShot:   if (burstSprite)      sr.sprite = burstSprite;      break;
+                case PowerupType.FastShoot:   if (fastShootSprite)  sr.sprite = fastShootSprite;  break;
+                case PowerupType.HomingShot:  if (homingSprite)     sr.sprite = homingSprite;     break;
+                case PowerupType.SpeedBoost:  if (speedBoostSprite) sr.sprite = speedBoostSprite; break;
             }
         }
 
@@ -58,4 +62,4 @@ public class Powerup : MonoBehaviour {
             }
         }
     }
-}
+}   
