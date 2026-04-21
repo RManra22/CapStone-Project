@@ -39,6 +39,9 @@ public class Player : MonoBehaviour {
     [SerializeField] private float boostedAcceleration = 4f;
     [SerializeField] private float boostedMaxVelocity = 5f;
     [SerializeField] private float reverseShotDuration = 8f;
+    [SerializeField] private float shieldDuration = 5f;
+    private bool isShielded = false;
+    private Coroutine shieldCoroutine;
     private bool isReverseShot = false;
     private Coroutine reverseShotCoroutine;
     private float baseFireRateMultiplier = 1f;
@@ -66,12 +69,17 @@ public class Player : MonoBehaviour {
         isInvincible = true;
         float elapsed = 0f;
         while (elapsed < invincibilityDuration) {
-            spriteRenderer.enabled = !spriteRenderer.enabled;
+            // only flash visibility if shield isn't active
+            if (!isShielded) {
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            }
             yield return new WaitForSeconds(flashInterval);
             elapsed += flashInterval;
         }
         spriteRenderer.enabled = true;
-        isInvincible = false;
+        // only end invincibility if shield isn't keeping it active
+        if (!isShielded)
+            isInvincible = false;
     }
 
     private void Update() {
@@ -156,6 +164,11 @@ public class Player : MonoBehaviour {
                     StopCoroutine(reverseShotCoroutine);
                 reverseShotCoroutine = StartCoroutine(ReverseShotTimer());
                 break;
+            case PowerupType.Shield:
+                if (shieldCoroutine != null)
+                    StopCoroutine(shieldCoroutine);
+                shieldCoroutine = StartCoroutine(ShieldTimer());
+                break;
         }
     }
 
@@ -212,6 +225,22 @@ public class Player : MonoBehaviour {
             FireBullet(transform.up);
             yield return new WaitForSeconds(0.05f);
         }
+    }
+    private IEnumerator ShieldTimer() {
+        isShielded = true;
+        isInvincible = true;
+        float elapsed = 0f;
+        while (elapsed < shieldDuration) {
+            spriteRenderer.color = Color.cyan;
+            yield return new WaitForSeconds(0.15f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.15f);
+            elapsed += 0.3f;
+        }
+        spriteRenderer.color = Color.white;
+        isShielded = false;
+        isInvincible = false;
+        shieldCoroutine = null;
     }
 
     private void FireBullet(Vector2 direction) {

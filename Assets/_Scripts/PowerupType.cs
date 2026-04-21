@@ -6,5 +6,6 @@ public enum PowerupType {
     FastShoot,
     HomingShot,
     SpeedBoost,
-    ReverseShot
+    ReverseShot,
+    Shield
 }
