@@ -11,6 +11,7 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private Sprite fastShootSprite;
     [SerializeField] private Sprite homingSprite;
     [SerializeField] private Sprite speedBoostSprite;
+    [SerializeField] private Sprite reverseShotSprite;
 
     private Vector2 driftDirection;
     private PowerupType powerupType;
@@ -20,8 +21,8 @@ public class Powerup : MonoBehaviour {
         mainCamera = Camera.main;
 
 
-        powerupType = PowerupType.SpeedBoost;
-        //powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
+        // powerupType = PowerupType.ReverseShot;
+        powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) {
@@ -31,6 +32,8 @@ public class Powerup : MonoBehaviour {
                 case PowerupType.FastShoot:   if (fastShootSprite)  sr.sprite = fastShootSprite;  break;
                 case PowerupType.HomingShot:  if (homingSprite)     sr.sprite = homingSprite;     break;
                 case PowerupType.SpeedBoost:  if (speedBoostSprite) sr.sprite = speedBoostSprite; break;
+                case PowerupType.ReverseShot: if (reverseShotSprite) sr.sprite = reverseShotSprite; break;
+
             }
         }
 

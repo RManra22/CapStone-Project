@@ -38,6 +38,9 @@ public class Player : MonoBehaviour {
     [SerializeField] private float speedBoostDuration = 8f;
     [SerializeField] private float boostedAcceleration = 4f;
     [SerializeField] private float boostedMaxVelocity = 5f;
+    [SerializeField] private float reverseShotDuration = 8f;
+    private bool isReverseShot = false;
+    private Coroutine reverseShotCoroutine;
     private float baseFireRateMultiplier = 1f;
     private Coroutine fastShootCoroutine;
     private bool isHoming = false;
@@ -148,6 +151,11 @@ public class Player : MonoBehaviour {
                     StopCoroutine(speedBoostCoroutine);
                 speedBoostCoroutine = StartCoroutine(SpeedBoostTimer());
                 break;
+            case PowerupType.ReverseShot:
+                if (reverseShotCoroutine != null)
+                    StopCoroutine(reverseShotCoroutine);
+                reverseShotCoroutine = StartCoroutine(ReverseShotTimer());
+                break;
         }
     }
 
@@ -182,6 +190,13 @@ public class Player : MonoBehaviour {
         speedBoostCoroutine = null;
     }
 
+    private IEnumerator ReverseShotTimer() {
+        isReverseShot = true;
+        yield return new WaitForSeconds(reverseShotDuration);
+        isReverseShot = false;
+        reverseShotCoroutine = null;
+    }
+
     private void ShootSingle() {
         FireBullet(transform.up);
     }
@@ -203,14 +218,23 @@ public class Player : MonoBehaviour {
         if (isHoming && homingBulletPrefab != null) {
             Rigidbody2D bullet = Instantiate(homingBulletPrefab, bulletSpawn.position, Quaternion.identity);
             bullet.linearVelocity = direction.normalized * 8f;
+            if (isReverseShot) {
+                Rigidbody2D reverseBullet = Instantiate(homingBulletPrefab, bulletSpawn.position, Quaternion.identity);
+                reverseBullet.linearVelocity = -direction.normalized * 8f;
+            }
         } else {
             Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
             Vector2 shipVelocity = shipRigidbody.linearVelocity;
             float shipForwardSpeed = Mathf.Max(0f, Vector2.Dot(shipVelocity, (Vector2)transform.up));
             bullet.linearVelocity = direction.normalized * shipForwardSpeed;
             bullet.AddForce(bulletSpeed * direction.normalized, ForceMode2D.Impulse);
+            if (isReverseShot) {
+                Rigidbody2D reverseBullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
+                reverseBullet.linearVelocity = -direction.normalized * shipForwardSpeed;
+                reverseBullet.AddForce(bulletSpeed * -direction.normalized, ForceMode2D.Impulse);
+            }
         }
-    }
+}
 
     private Vector2 Rotate2D(Vector2 vector, float degrees) {
         float radians = degrees * Mathf.Deg2Rad;

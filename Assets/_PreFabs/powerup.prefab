@@ -108,6 +108,7 @@ MonoBehaviour:
   fastShootSprite: {fileID: 7366359900140411234, guid: 0bbafeaf0e19ced4ba16f54573c748a1, type: 3}
   homingSprite: {fileID: 7684855580156339718, guid: 0bbafeaf0e19ced4ba16f54573c748a1, type: 3}
   speedBoostSprite: {fileID: 6998160432121303695, guid: 806a88b9eac0c1c44be85d460c2e6f56, type: 3}
+  reverseShotSprite: {fileID: 4166622614638701010, guid: f620ad25d9b6b9f4fab65f64cebcaa3c, type: 3}
 --- !u!58 &6576202341564121546
 CircleCollider2D:
   m_ObjectHideFlags: 0

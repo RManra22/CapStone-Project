@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4422869f2c600724a80fc993109ceafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipAcceleration: 10
-  shipMaxVelocity: 10
+  shipAcceleration: 2
+  shipMaxVelocity: 2
   shipRotationSpeed: 180
   bulletSpeed: 4
   singleShotFireRate: 0.5
@@ -238,6 +238,10 @@ MonoBehaviour:
   fastShootMultiplier: 0.35
   homingDuration: 8
   homingBulletPrefab: {fileID: 3815930869351626043, guid: a3369de936946364e8bb24ee35f5e93c, type: 3}
+  speedBoostDuration: 8
+  boostedAcceleration: 4
+  boostedMaxVelocity: 5
+  reverseShotDuration: 8
 --- !u!114 &5908078770941377494
 MonoBehaviour:
   m_ObjectHideFlags: 0

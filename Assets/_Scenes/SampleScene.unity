@@ -3248,11 +3248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2359514702351982607, guid: 35411391fa3664ef4803141599db6e6e, type: 3}
       propertyPath: shipMaxVelocity
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2359514702351982607, guid: 35411391fa3664ef4803141599db6e6e, type: 3}
       propertyPath: shipAcceleration
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2359514702351982607, guid: 35411391fa3664ef4803141599db6e6e, type: 3}
       propertyPath: homingBulletPrefab

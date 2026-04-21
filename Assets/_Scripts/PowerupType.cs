@@ -5,5 +5,6 @@ public enum PowerupType {
     BurstShot,
     FastShoot,
     HomingShot,
-    SpeedBoost
+    SpeedBoost,
+    ReverseShot
 }
