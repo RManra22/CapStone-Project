@@ -5,15 +5,6 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private float driftSpeed = 1.5f;
     [SerializeField] private float lifetime = 10f;
 
-    [Header("Type Sprites (optional)")]
-    [SerializeField] private Sprite spreadSprite;
-    [SerializeField] private Sprite burstSprite;
-    [SerializeField] private Sprite fastShootSprite;
-    [SerializeField] private Sprite homingSprite;
-    [SerializeField] private Sprite speedBoostSprite;
-    [SerializeField] private Sprite reverseShotSprite;
-    [SerializeField] private Sprite shieldSprite;
-
     [Header("Sound Effects")]
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private AudioSource audioSource;
@@ -32,14 +23,13 @@ public class Powerup : MonoBehaviour {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) {
             switch (powerupType) {
-                case PowerupType.SpreadShot:  if (spreadSprite)      sr.sprite = spreadSprite;      sr.color = new Color(0.5f, 0.5f, 1f, 1f);   break;
-                case PowerupType.BurstShot:   if (burstSprite)       sr.sprite = burstSprite;       sr.color = new Color(1f, 0.5f, 0.5f, 1f);   break;
-                case PowerupType.FastShoot:   if (fastShootSprite)   sr.sprite = fastShootSprite;   sr.color = new Color(0.5f, 1f, 0.5f, 1f);   break;
-                case PowerupType.HomingShot:  if (homingSprite)      sr.sprite = homingSprite;      sr.color = new Color(1f, 1f, 0.5f, 1f);     break;
-                case PowerupType.SpeedBoost:  if (speedBoostSprite)  sr.sprite = speedBoostSprite;  sr.color = new Color(0.5f, 1f, 1f, 1f);     break;
-                case PowerupType.ReverseShot: if (reverseShotSprite) sr.sprite = reverseShotSprite; sr.color = new Color(1f, 0.5f, 1f, 1f);     break;
-                case PowerupType.Shield:      if (shieldSprite)      sr.sprite = shieldSprite;      sr.color = new Color(1f, 1f, 1f, 1f);       break;
-
+                case PowerupType.SpreadShot:  sr.color = new Color(0.5f, 0.5f, 1f, 1f);   break; // Blue Color
+                case PowerupType.BurstShot:   sr.color = new Color(1f, 0.5f, 0.5f, 1f);   break; // Red Color
+                case PowerupType.FastShoot:   sr.color = new Color(0.5f, 1f, 0.5f, 1f);   break; // Green Color
+                case PowerupType.HomingShot:  sr.color = new Color(1f, 1f, 0.5f, 1f);     break; // Yellow Color
+                case PowerupType.SpeedBoost:  sr.color = new Color(0.5f, 1f, 1f, 1f);     break; // Cyan Color
+                case PowerupType.ReverseShot: sr.color = new Color(1f, 0.5f, 1f, 1f);     break; // Magenta Color
+                case PowerupType.Shield:      sr.color = new Color(1f, 1f, 1f, 1f);       break; // No color/White
             }
         }
 
