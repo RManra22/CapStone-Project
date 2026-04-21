@@ -57,7 +57,7 @@ public class Asteroid : MonoBehaviour {
             }
             else
             {
-                AudioSource.PlayClipAtPoint(destroyedSound, transform.position, 20f);
+                AudioSource.PlayClipAtPoint(destroyedSound, transform.position, 50f);
             }
 
             Instantiate(destroyedParticles, transform.position, Quaternion.identity);

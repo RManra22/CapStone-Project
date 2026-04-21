@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 92374116919921039}
   - component: {fileID: 8410986124689563132}
   - component: {fileID: 7798681663738931230}
-  - component: {fileID: 5880466793958873366}
+  - component: {fileID: 2084072918894829505}
   - component: {fileID: 2359514702351982607}
   - component: {fileID: 5908078770941377494}
   - component: {fileID: 3127525956327586098}
@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4694419298953805253}
@@ -114,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -510947276697917540, guid: 0bbafeaf0e19ced4ba16f54573c748a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &5880466793958873366
+--- !u!60 &2084072918894829505
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,8 +189,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 3.375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -198,9 +198,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 0.25, y: 1.6875}
+      - {x: -0.375, y: 1.6875}
+      - {x: -2, y: 0.0625}
+      - {x: -2, y: -0.8125}
+      - {x: -1.5, y: -1.6875}
+      - {x: 1.625, y: -1.6875}
+      - {x: 2, y: -0.9375}
+      - {x: 2, y: -0.0625}
   m_UseDelaunayMesh: 0
 --- !u!114 &2359514702351982607
 MonoBehaviour:
@@ -226,13 +231,13 @@ MonoBehaviour:
   audioSource: {fileID: 887466776734930691}
   bulletSpawn: {fileID: 4694419298953805253}
   bulletPrefab: {fileID: 3815930869351626043, guid: a3369de936946364e8bb24ee35f5e93c, type: 3}
-  destroyedParticles: {fileID: 2073316840830977708, guid: 76968e30eab311848a53795db83af44d, type: 3}
+  destroyedParticles: {fileID: 2073316840830977708, guid: 0f275d7f803927e49ac367857a122aec, type: 3}
   invincibilityDuration: 3
   flashInterval: 0.15
   fastShootDuration: 8
   fastShootMultiplier: 0.35
   homingDuration: 8
-  homingBulletPrefab: {fileID: 7831337055689602689, guid: 3a9120d349f2a403589db0d8824799a0, type: 3}
+  homingBulletPrefab: {fileID: 3815930869351626043, guid: a3369de936946364e8bb24ee35f5e93c, type: 3}
 --- !u!114 &5908078770941377494
 MonoBehaviour:
   m_ObjectHideFlags: 0

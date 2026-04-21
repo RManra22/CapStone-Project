@@ -33,6 +33,12 @@ public class Boss : MonoBehaviour {
   [SerializeField] private float asteroidSpawnInterval = 6f;
   [SerializeField] private int asteroidsToSpawn = 2;
 
+  [SerializeField] private AudioClip hitSound;
+  [SerializeField] private AudioClip deathSound;
+  [SerializeField] private AudioClip shootSound;
+  [SerializeField] private AudioSource audioSource;
+  
+
   private enum BossState { Drifting, Chasing, Enraged }
   private BossState state = BossState.Drifting;
 
@@ -221,6 +227,8 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
     bullet.gameObject.layer = LayerMask.NameToLayer("BossBullet");
     bullet.gameObject.tag = "BossBullet";
     bullet.AddForce(direction.normalized * bulletSpeed, ForceMode2D.Impulse);
+    audioSource.clip = shootSound;
+    audioSource.Play();
 }
 
   private void OnTriggerEnter2D(Collider2D collision) {
@@ -233,6 +241,8 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
 
   private void TakeDamage(int amount) {
     currentHealth -= amount;
+    audioSource.clip = hitSound;
+    audioSource.Play();
     StartCoroutine(FlashOnHit());
     if (currentHealth <= 0) Die();
   }
@@ -248,6 +258,11 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
 
   private void Die() {
     isAlive = false;
+    audioSource.clip = deathSound;
+    audioSource.Play();
+    GetComponent<SpriteRenderer>().enabled = false;
+    GetComponent<Collider2D>().enabled = false;
+    
 
     // Destroy all spawned asteroids
     foreach (Asteroid a in spawnedAsteroids) {
@@ -268,7 +283,7 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
         Instantiate(healthPackPrefab, transform.position, Quaternion.identity);
 
     Instantiate(destroyedParticles, transform.position, Quaternion.identity);
-    Destroy(gameObject);
+    Destroy(gameObject, deathSound.length);
 }
 
   private Vector2 Rotate2D(Vector2 vector, float degrees) {

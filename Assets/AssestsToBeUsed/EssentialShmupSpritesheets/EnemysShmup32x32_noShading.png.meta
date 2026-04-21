@@ -438,12 +438,16 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: -15, y: -5}
+        - {x: 0, y: -11}
+        - {x: 15, y: -5}
+        - {x: 0, y: 11}
+      tessellationDetail: 0
       bones: []
       spriteID: 4631acaebc3418f20800000000000000
       internalID: 3423091734874821476
@@ -460,12 +464,12 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 7d4975f8d0986f0a0800000000000000
       internalID: -6848135492037798697
@@ -482,12 +486,12 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 3aaf6f54e8f011920800000000000000
       internalID: 2959163533892713123
@@ -504,12 +508,12 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 55447b7baf282b6e0800000000000000
       internalID: -1823250885795953579
@@ -526,12 +530,12 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: ba63f728482c55df0800000000000000
       internalID: -192033534712531285
@@ -548,12 +552,12 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: f4ed2cb19a01d67c0800000000000000
       internalID: -4076583769199157681
@@ -570,12 +574,12 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 273687b6e40dd6080800000000000000
       internalID: -9192462229164235918
@@ -592,12 +596,12 @@ TextureImporter:
         width: 30
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 866857ae33aaa2cc0800000000000000
       internalID: -3734985800996780440
@@ -614,12 +618,12 @@ TextureImporter:
         width: 30
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: a11af96b0f50bd990800000000000000
       internalID: -7360282634592739046
@@ -636,12 +640,12 @@ TextureImporter:
         width: 30
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 5eb6f777f48a37380800000000000000
       internalID: -8974644573158544411
@@ -658,12 +662,12 @@ TextureImporter:
         width: 30
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 4b8c79a50b63805f0800000000000000
       internalID: -790321603541481292
@@ -680,12 +684,12 @@ TextureImporter:
         width: 30
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: c2e1075baeed0c530800000000000000
       internalID: 3873340779186363948
@@ -702,12 +706,12 @@ TextureImporter:
         width: 20
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: bb7136c81e51a7ba0800000000000000
       internalID: -6090531487598045253
@@ -724,12 +728,12 @@ TextureImporter:
         width: 15
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 913e172f19f7ef1e0800000000000000
       internalID: -2162150506276723943
@@ -746,12 +750,12 @@ TextureImporter:
         width: 8
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 3e387dddc96b08f00800000000000000
       internalID: 1117093492440925155
@@ -763,17 +767,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_15
       rect:
         serializedVersion: 2
-        x: 193
-        y: 163
-        width: 31
-        height: 93
+        x: 207
+        y: 224
+        width: 2
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 8035bb0f9231d44d0800000000000000
       internalID: -3148839493608713464
@@ -790,12 +794,12 @@ TextureImporter:
         width: 9
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 70d2ddf51f29fa730800000000000000
       internalID: 4012587358403505415
@@ -812,12 +816,12 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 40f09e837c2c6b260800000000000000
       internalID: 7113086822387355396
@@ -834,12 +838,12 @@ TextureImporter:
         width: 17
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: d983bd7d0ace1bb40800000000000000
       internalID: 5454400799282772125
@@ -856,12 +860,12 @@ TextureImporter:
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 555c2c6ea3f154920800000000000000
       internalID: 2973817466788169045
@@ -878,12 +882,12 @@ TextureImporter:
         width: 28
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 2b53c426b4c6b7820800000000000000
       internalID: 2917044254680036786
@@ -900,12 +904,12 @@ TextureImporter:
         width: 29
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 2ce685899aec0fbf0800000000000000
       internalID: -292506747978355006
@@ -918,16 +922,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 161
-        y: 162
-        width: 34
-        height: 61
+        y: 195
+        width: 31
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 029f6d826749365a0800000000000000
       internalID: -6529211799544858336
@@ -944,12 +948,12 @@ TextureImporter:
         width: 32
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 2a8a5574d74453960800000000000000
       internalID: 7581040852606494882
@@ -966,12 +970,12 @@ TextureImporter:
         width: 31
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 7bc9417ed9a4ee370800000000000000
       internalID: 8353696400866057399
@@ -988,12 +992,12 @@ TextureImporter:
         width: 33
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: a99bf2fc67d057ec0800000000000000
       internalID: -3569932325687936614
@@ -1006,16 +1010,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 161
-        width: 45
-        height: 31
+        y: 162
+        width: 32
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: bf33dc182efefab10800000000000000
       internalID: 1995076916067775483
@@ -1027,17 +1031,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_27
       rect:
         serializedVersion: 2
-        x: 65
-        y: 160
-        width: 16
-        height: 14
+        x: 161
+        y: 130
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 303855ce41b6be820800000000000000
       internalID: 2948568118652666627
@@ -1049,17 +1053,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_28
       rect:
         serializedVersion: 2
-        x: 72
-        y: 169
-        width: 17
-        height: 18
+        x: 192
+        y: 128
+        width: 33
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 828c1c6d707650650800000000000000
       internalID: 6198473745510811688
@@ -1071,17 +1075,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_29
       rect:
         serializedVersion: 2
-        x: 78
-        y: 179
-        width: 17
-        height: 14
+        x: 227
+        y: 129
+        width: 28
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: ff8e65c80086b4940800000000000000
       internalID: 5281429339585833215
@@ -1093,17 +1097,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_30
       rect:
         serializedVersion: 2
-        x: 80
-        y: 161
-        width: 16
-        height: 19
+        x: 257
+        y: 127
+        width: 31
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 5cd7dddcc3c27fc60800000000000000
       internalID: 7851793115007253957
@@ -1115,17 +1119,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_31
       rect:
         serializedVersion: 2
-        x: 95
-        y: 180
-        width: 19
-        height: 13
+        x: 1
+        y: 32
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 10706643b321dea40800000000000000
       internalID: 5398991573778564865
@@ -1137,17 +1141,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_32
       rect:
         serializedVersion: 2
-        x: 95
-        y: 159
-        width: 14
-        height: 16
+        x: 32
+        y: 32
+        width: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 9324ad69aadab94c0800000000000000
       internalID: -4279636072698592711
@@ -1159,17 +1163,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_33
       rect:
         serializedVersion: 2
-        x: 103
-        y: 169
-        width: 8
-        height: 12
+        x: 64
+        y: 32
+        width: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 4b813fbd7d66c4e30800000000000000
       internalID: 4489076005875685556
@@ -1181,17 +1185,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_34
       rect:
         serializedVersion: 2
-        x: 112
-        y: 185
-        width: 14
-        height: 8
+        x: 96
+        y: 33
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: a81aaad0b9191fb40800000000000000
       internalID: 5472315117367107978
@@ -1203,17 +1207,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_35
       rect:
         serializedVersion: 2
-        x: 113
-        y: 168
-        width: 8
-        height: 9
+        x: 128
+        y: 33
+        width: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: c8aa77f94bdcaf6f0800000000000000
       internalID: -649981020548388212
@@ -1225,17 +1229,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_36
       rect:
         serializedVersion: 2
-        x: 114
-        y: 177
-        width: 6
-        height: 9
+        x: 64
+        y: 161
+        width: 32
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 36028160ee9822eb0800000000000000
       internalID: -4746079401897615261
@@ -1247,17 +1251,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_37
       rect:
         serializedVersion: 2
-        x: 120
-        y: 161
-        width: 12
-        height: 26
+        x: 97
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 67d334b6a34d54a70800000000000000
       internalID: 8810681593393003894
@@ -1269,17 +1273,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_38
       rect:
         serializedVersion: 2
-        x: 129
-        y: 162
-        width: 9
-        height: 7
+        x: 130
+        y: 160
+        width: 30
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: b73e055e8216c50c0800000000000000
       internalID: -4585683492296137861
@@ -1291,17 +1295,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_39
       rect:
         serializedVersion: 2
-        x: 130
-        y: 184
-        width: 9
-        height: 9
+        x: 161
+        y: 161
+        width: 31
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 1f3e153ebcf1b45b0800000000000000
       internalID: -5383173969038679055
@@ -1313,17 +1317,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_40
       rect:
         serializedVersion: 2
-        x: 130
-        y: 167
-        width: 6
-        height: 8
+        x: 193
+        y: 161
+        width: 31
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 22d18155655dc5110800000000000000
       internalID: 1251109363273702690
@@ -1335,17 +1339,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_41
       rect:
         serializedVersion: 2
-        x: 135
-        y: 167
-        width: 21
-        height: 26
+        x: 194
+        y: 195
+        width: 29
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: eeaa6cd182700c130800000000000000
       internalID: 3584873172266560238
@@ -1357,17 +1361,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_42
       rect:
         serializedVersion: 2
-        x: 136
-        y: 161
-        width: 6
-        height: 6
+        x: 0
+        y: 97
+        width: 32
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 25418202e8ebf5980800000000000000
       internalID: -8547904050091781038
@@ -1379,152 +1383,20 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_43
       rect:
         serializedVersion: 2
-        x: 141
-        y: 160
-        width: 6
-        height: 7
+        x: 80
+        y: 80
+        width: 1
+        height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 4e68a87680f4bd700800000000000000
       internalID: 566133075680593636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_44
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 159
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1432a4fe55e1cf4c0800000000000000
-      internalID: -4252490593708924095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_45
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 166
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 456be597469a30a00800000000000000
-      internalID: 721606614307485268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_46
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 181
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dce746b6a8a6f8780800000000000000
-      internalID: -8678600814179877171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_47
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 170
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdbe285f138434380800000000000000
-      internalID: -8988261051891782693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_48
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 161
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95d4a8ff3e326d940800000000000000
-      internalID: 5320479471936621913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_49
-      rect:
-        serializedVersion: 2
-        x: 182
-        y: 164
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de9c2776665090a10800000000000000
-      internalID: 1876036657156901357
       vertices: []
       indices: 
       edges: []
@@ -1538,12 +1410,12 @@ TextureImporter:
         width: 17
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: a2fd93f1a581a4450800000000000000
       internalID: 6073693822812544810
@@ -1556,16 +1428,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 258
-        y: 127
-        width: 30
-        height: 62
+        y: 165
+        width: 26
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: c484d1fd172331d00800000000000000
       internalID: 942152211706497100
@@ -1582,12 +1454,12 @@ TextureImporter:
         width: 35
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 115b3ee4cedf68030800000000000000
       internalID: 3496761352077423889
@@ -1604,37 +1476,15 @@ TextureImporter:
         width: 33
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 1173ff4ec4695ce80800000000000000
       internalID: -8158949892908173551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_54
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 159
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d86a3844deff3fb00800000000000000
-      internalID: 861313348279707277
       vertices: []
       indices: 
       edges: []
@@ -1644,107 +1494,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 129
-        width: 45
-        height: 31
+        y: 130
+        width: 32
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 52d7270f156bd47f0800000000000000
       internalID: -626644310091989723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_56
-      rect:
-        serializedVersion: 2
-        x: 173
-        y: 147
-        width: 18
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 187b8222f41597c10800000000000000
-      internalID: 2051760505561331585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_57
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 148
-        width: 19
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0530d74107c426f20800000000000000
-      internalID: 3414375511764042576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_58
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 153
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f9f591b138617310800000000000000
-      internalID: 1401015521731017203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_59
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 148
-        width: 31
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ed21a8962d42d0c0800000000000000
-      internalID: -4552491445153354266
       vertices: []
       indices: 
       edges: []
@@ -1754,16 +1516,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 31
-        height: 59
+        y: 131
+        width: 27
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 2eb072d36cde0af20800000000000000
       internalID: 3432004351741594594
@@ -1780,257 +1542,15 @@ TextureImporter:
         width: 28
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: f3a305b4974684a40800000000000000
       internalID: 5352638629247203903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_62
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 128
-        width: 16
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64a97fdecf378c200800000000000000
-      internalID: 200537713579366982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_63
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 135
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d57e5cd00d41fabe0800000000000000
-      internalID: -1463928470055295139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_64
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 129
-        width: 16
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96549c3a8bcd4b3c0800000000000000
-      internalID: -4344605054925716119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_65
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 127
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e07303418146dfd70800000000000000
-      internalID: 9078522478429484814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_66
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 137
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4845646b189d85b50800000000000000
-      internalID: 6582250006534050948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_67
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 129
-        width: 9
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acb48da4d4746fa30800000000000000
-      internalID: 4248661695764384714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_68
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 130
-        width: 11
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c8c140f4fd3f0550800000000000000
-      internalID: 6129185740086692034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_69
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 138
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed6856d68d40d7db0800000000000000
-      internalID: -4792669100857522466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_70
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 129
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed9872062655c4d70800000000000000
-      internalID: 9028685233979361758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_71
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 138
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 506aa4ef60b5d98b0800000000000000
-      internalID: -5143855113793001979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_72
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 132
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c04a5edfc406c1be0800000000000000
-      internalID: -1505222291655121908
       vertices: []
       indices: 
       edges: []
@@ -2044,81 +1564,15 @@ TextureImporter:
         width: 32
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 96e2770fdcadf12d0800000000000000
       internalID: -3305683023429161367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_74
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 127
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9147c51c6d19aa3f0800000000000000
-      internalID: -888737624899161063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_75
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 128
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b69660d772057420800000000000000
-      internalID: 2627008671261300400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_76
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 129
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 304459faa9ce0f350800000000000000
-      internalID: 6048594448673489923
       vertices: []
       indices: 
       edges: []
@@ -2132,12 +1586,12 @@ TextureImporter:
         width: 21
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: a49c417dbf2af8c30800000000000000
       internalID: 4363885766474254666
@@ -2150,16 +1604,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 68
-        y: 79
-        width: 25
-        height: 46
+        y: 100
+        width: 26
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 9ff6d9dbe5d75e940800000000000000
       internalID: 5324799980297089017
@@ -2176,12 +1630,12 @@ TextureImporter:
         width: 32
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: ac0b67af69e541c70800000000000000
       internalID: 8940875162777465034
@@ -2198,12 +1652,12 @@ TextureImporter:
         width: 26
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 7e13f2bc9834a6550800000000000000
       internalID: 6154806099853652455
@@ -2220,12 +1674,12 @@ TextureImporter:
         width: 31
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: b01781fa02eae74b0800000000000000
       internalID: -5440719844417179381
@@ -2242,12 +1696,12 @@ TextureImporter:
         width: 30
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 8f7a6f8fd21cdd740800000000000000
       internalID: 5178507549740541944
@@ -2264,12 +1718,12 @@ TextureImporter:
         width: 17
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 98cba74dd0a3da050800000000000000
       internalID: 5813366525078977673
@@ -2286,12 +1740,20 @@ TextureImporter:
         width: 13
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: -5.5, y: 2.5}
+        - {x: -5.5, y: -2.5}
+        - {x: -1.5, y: -4.5}
+        - {x: 1.5, y: -4.5}
+        - {x: 5.5, y: -2.5}
+        - {x: 5.5, y: 2.5}
+        - {x: 1.5, y: 4.5}
+        - {x: -1.5, y: 4.5}
+      tessellationDetail: 0
       bones: []
       spriteID: f99e67cd5e9c460a0800000000000000
       internalID: -6889159540886541921
@@ -2308,12 +1770,12 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 6c25cc27004fbcf90800000000000000
       internalID: -6932178918643576122
@@ -2325,17 +1787,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_86
       rect:
         serializedVersion: 2
-        x: 91
-        y: 32
-        width: 37
-        height: 59
+        x: 101
+        y: 70
+        width: 21
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: f4edeece59a086830800000000000000
       internalID: 4064510302743354959
@@ -2347,17 +1809,17 @@ TextureImporter:
       name: EnemysShmup32x32_noShading_87
       rect:
         serializedVersion: 2
-        x: 129
-        y: 33
-        width: 31
-        height: 58
+        x: 134
+        y: 69
+        width: 21
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 8add951aa2dde6220800000000000000
       internalID: 2481163619893108136
@@ -2374,12 +1836,12 @@ TextureImporter:
         width: 29
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 9d9e959c17f6546d0800000000000000
       internalID: -3006874641699837479
@@ -2396,12 +1858,12 @@ TextureImporter:
         width: 32
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 8b27efe4dab9205e0800000000000000
       internalID: -1944820920413687112
@@ -2418,12 +1880,12 @@ TextureImporter:
         width: 31
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 7b0e70608bc03bda0800000000000000
       internalID: -5930382299802115913
@@ -2440,213 +1902,15 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: a5fdbb10deaf14ca0800000000000000
       internalID: -6034266129856471206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_92
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 49
-        width: 17
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f02ceaa0925a7a260800000000000000
-      internalID: 7108832132519084559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_93
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 39
-        width: 29
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3575d1867966e5200800000000000000
-      internalID: 170686636359505747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_94
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 56
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eeeb8b132191f53f0800000000000000
-      internalID: -909981033771254034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_95
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 53
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 754d20be6dcf4d3e0800000000000000
-      internalID: -2029719532041218985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_96
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 58
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c81541029e616480800000000000000
-      internalID: -8907717014596544320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_97
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 41
-        width: 45
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba79727e6f17b1d10800000000000000
-      internalID: 2097395356725122987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_98
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 36
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e64a3b5e4949c0190800000000000000
-      internalID: -7994851871259646866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_99
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 32
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1a634db2ca323cb30800000000000000
-      internalID: 4306324891073001121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_100
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 31
-        width: 22
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b7e0b9e9b9aceed0800000000000000
-      internalID: -2383343486831106123
       vertices: []
       indices: 
       edges: []
@@ -2660,12 +1924,12 @@ TextureImporter:
         width: 8
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 950dafa9d8e893a40800000000000000
       internalID: 5348462771320836185
@@ -2682,12 +1946,12 @@ TextureImporter:
         width: 8
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 8de173aabf25e0300800000000000000
       internalID: 220204672633741016
@@ -2704,12 +1968,12 @@ TextureImporter:
         width: 8
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 76356b97fc64e5b80800000000000000
       internalID: -8404201997712600217
@@ -2726,59 +1990,15 @@ TextureImporter:
         width: 8
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 1bd12e761e9047c80800000000000000
       internalID: -8326018947386040911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_105
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 31
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 577a15ecb76eb4a40800000000000000
-      internalID: 5353626001476790133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemysShmup32x32_noShading_106
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 32
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0eb774ea162b8da70800000000000000
-      internalID: 8852021200202202080
       vertices: []
       indices: 
       edges: []
@@ -2792,12 +2012,12 @@ TextureImporter:
         width: 10
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: fb9e7e303f9917ef0800000000000000
       internalID: -112139246685918785
@@ -2814,12 +2034,12 @@ TextureImporter:
         width: 10
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 3c5dfa275609f45f0800000000000000
       internalID: -770238245866842685
@@ -2836,12 +2056,12 @@ TextureImporter:
         width: 10
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 0f4adfd6308771d20800000000000000
       internalID: 3249197612296676592
@@ -2858,12 +2078,12 @@ TextureImporter:
         width: 10
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 2376149641fd66020800000000000000
       internalID: 2334798735596414770
@@ -2875,7 +2095,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4933c3e20000b0a4d94b9bd6cfd10190
     internalID: 0
     vertices: []
     indices: 
