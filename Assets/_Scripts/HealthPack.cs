@@ -9,6 +9,9 @@ public class HealthPack : MonoBehaviour {
     [SerializeField] private float bobAmplitude = 0.2f;
     [SerializeField] private float bobFrequency = 2f;
 
+    [SerializeField] private AudioClip pickUpSound;
+    [SerializeField] private AudioSource audioSource;
+
     private Vector2 driftDirection;
 
     private void Start() {
@@ -42,7 +45,11 @@ public class HealthPack : MonoBehaviour {
         if (gm != null && gm.currentLives < gm.maxLives) {
             gm.currentLives++;
             gm.UpdateLivesUI();
-            Destroy(gameObject);
+            audioSource.clip = pickUpSound;
+            audioSource.Play();
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            Destroy(gameObject, pickUpSound.length);
         }
     }
   }
