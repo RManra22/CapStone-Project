@@ -114,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -510947276697917540, guid: 0bbafeaf0e19ced4ba16f54573c748a1, type: 3}
+  m_Sprite: {fileID: -7051480301275156021, guid: 806a88b9eac0c1c44be85d460c2e6f56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -226,9 +226,6 @@ MonoBehaviour:
   singleShotFireRate: 0.5
   spreadFireRate: 1
   burstFireRate: 0.8
-  shootSound: {fileID: 8300000, guid: 9db57beb1b642504fa0fb92081c7b20b, type: 3}
-  deathSound: {fileID: 8300000, guid: c7aa983e9953abc49bb25bbe1eb75079, type: 3}
-  audioSource: {fileID: 887466776734930691}
   bulletSpawn: {fileID: 4694419298953805253}
   bulletPrefab: {fileID: 3815930869351626043, guid: a3369de936946364e8bb24ee35f5e93c, type: 3}
   destroyedParticles: {fileID: 2073316840830977708, guid: 0f275d7f803927e49ac367857a122aec, type: 3}
@@ -242,6 +239,10 @@ MonoBehaviour:
   boostedAcceleration: 4
   boostedMaxVelocity: 5
   reverseShotDuration: 8
+  shieldDuration: 5
+  shootSound: {fileID: 8300000, guid: 9db57beb1b642504fa0fb92081c7b20b, type: 3}
+  deathSound: {fileID: 8300000, guid: c7aa983e9953abc49bb25bbe1eb75079, type: 3}
+  audioSource: {fileID: 887466776734930691}
 --- !u!114 &5908078770941377494
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -33,6 +33,8 @@ public class Boss : MonoBehaviour {
   [SerializeField] private float asteroidSpawnInterval = 6f;
   [SerializeField] private int asteroidsToSpawn = 2;
 
+    [Header("Sound Effects")]
+
   [SerializeField] private AudioClip hitSound;
   [SerializeField] private AudioClip deathSound;
   [SerializeField] private AudioClip shootSound;

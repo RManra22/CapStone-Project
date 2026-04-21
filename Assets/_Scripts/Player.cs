@@ -13,9 +13,6 @@ public class Player : MonoBehaviour {
     [SerializeField] private float singleShotFireRate = 0.5f;
     [SerializeField] private float spreadFireRate = 1f;
     [SerializeField] private float burstFireRate = 0.8f;
-    [SerializeField] private AudioClip shootSound;
-    [SerializeField] private AudioClip deathSound;
-    [SerializeField] private AudioSource audioSource;
     private float nextFireTime = 0f;
 
     // Shooting styles: 1 = Single, 2 = Spread, 3 = Burst
@@ -40,6 +37,12 @@ public class Player : MonoBehaviour {
     [SerializeField] private float boostedMaxVelocity = 5f;
     [SerializeField] private float reverseShotDuration = 8f;
     [SerializeField] private float shieldDuration = 5f;
+
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioSource audioSource;
+
     private bool isShielded = false;
     private Coroutine shieldCoroutine;
     private bool isReverseShot = false;

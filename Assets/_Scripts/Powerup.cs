@@ -14,6 +14,10 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private Sprite reverseShotSprite;
     [SerializeField] private Sprite shieldSprite;
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip pickupSound;
+    [SerializeField] private AudioSource audioSource;
+
     private Vector2 driftDirection;
     private PowerupType powerupType;
     private Camera mainCamera;
@@ -22,19 +26,19 @@ public class Powerup : MonoBehaviour {
         mainCamera = Camera.main;
 
 
-        powerupType = PowerupType.Shield;
-        //powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
+        //powerupType = PowerupType.Shield;
+        powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) {
             switch (powerupType) {
-                case PowerupType.SpreadShot:  if (spreadSprite)      sr.sprite = spreadSprite;      break;
-                case PowerupType.BurstShot:   if (burstSprite)       sr.sprite = burstSprite;       break;
-                case PowerupType.FastShoot:   if (fastShootSprite)   sr.sprite = fastShootSprite;   break;
-                case PowerupType.HomingShot:  if (homingSprite)      sr.sprite = homingSprite;      break;
-                case PowerupType.SpeedBoost:  if (speedBoostSprite)  sr.sprite = speedBoostSprite;  break;
-                case PowerupType.ReverseShot: if (reverseShotSprite) sr.sprite = reverseShotSprite; break;
-                case PowerupType.Shield:      if (shieldSprite)      sr.sprite = shieldSprite;      break;
+                case PowerupType.SpreadShot:  if (spreadSprite)      sr.sprite = spreadSprite;      sr.color = new Color(0.5f, 0.5f, 1f, 1f);   break;
+                case PowerupType.BurstShot:   if (burstSprite)       sr.sprite = burstSprite;       sr.color = new Color(1f, 0.5f, 0.5f, 1f);   break;
+                case PowerupType.FastShoot:   if (fastShootSprite)   sr.sprite = fastShootSprite;   sr.color = new Color(0.5f, 1f, 0.5f, 1f);   break;
+                case PowerupType.HomingShot:  if (homingSprite)      sr.sprite = homingSprite;      sr.color = new Color(1f, 1f, 0.5f, 1f);     break;
+                case PowerupType.SpeedBoost:  if (speedBoostSprite)  sr.sprite = speedBoostSprite;  sr.color = new Color(0.5f, 1f, 1f, 1f);     break;
+                case PowerupType.ReverseShot: if (reverseShotSprite) sr.sprite = reverseShotSprite; sr.color = new Color(1f, 0.5f, 1f, 1f);     break;
+                case PowerupType.Shield:      if (shieldSprite)      sr.sprite = shieldSprite;      sr.color = new Color(1f, 1f, 1f, 1f);       break;
 
             }
         }
@@ -63,7 +67,11 @@ public class Powerup : MonoBehaviour {
             Player player = collision.GetComponent<Player>();
             if (player != null) {
                 player.ApplyPowerup(powerupType);
-                Destroy(gameObject);
+                audioSource.clip = pickupSound;
+                audioSource.Play();
+                GetComponent<SpriteRenderer>().enabled = false;
+                GetComponent<Collider2D>().enabled = false;
+                Destroy(gameObject, pickupSound.length);
             }
         }
     }
