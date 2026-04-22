@@ -17,8 +17,7 @@ public class Powerup : MonoBehaviour {
     private void Start() {
         mainCamera = Camera.main;
 
-        // powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
-        powerupType = PowerupType.HomingShot;   
+        powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) {
