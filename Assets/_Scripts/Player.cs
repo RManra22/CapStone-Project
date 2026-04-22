@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Player : MonoBehaviour {
     [Header("Ship parameters")]
@@ -52,6 +53,7 @@ public class Player : MonoBehaviour {
     private bool isHoming = false;
     private Coroutine homingCoroutine;
     private Coroutine speedBoostCoroutine;
+    private Coroutine showPowerupTextCoroutine;
 
     private PlayerInput playerInput;
     private Rigidbody2D shipRigidbody;
@@ -59,6 +61,11 @@ public class Player : MonoBehaviour {
     private bool isAlive = true;
     private bool isInvincible = false;
     private bool isAccelerating = false;
+
+    private TextMeshProUGUI powerupText;
+    public void SetPowerupText(TextMeshProUGUI text) {
+        powerupText = text;
+    }
 
     private void Start() {
         shipRigidbody = GetComponent<Rigidbody2D>();
@@ -72,15 +79,12 @@ public class Player : MonoBehaviour {
         isInvincible = true;
         float elapsed = 0f;
         while (elapsed < invincibilityDuration) {
-            // only flash visibility if shield isn't active
-            if (!isShielded) {
+            if (!isShielded)
                 spriteRenderer.enabled = !spriteRenderer.enabled;
-            }
             yield return new WaitForSeconds(flashInterval);
             elapsed += flashInterval;
         }
         spriteRenderer.enabled = true;
-        // only end invincibility if shield isn't keeping it active
         if (!isShielded)
             isInvincible = false;
     }
@@ -138,39 +142,52 @@ public class Player : MonoBehaviour {
     }
 
     public void ApplyPowerup(PowerupType type) {
+        // Stop any existing powerup text coroutine
+        if (showPowerupTextCoroutine != null) {
+            StopCoroutine(showPowerupTextCoroutine);
+            showPowerupTextCoroutine = null;
+        }
+
         switch (type) {
             case PowerupType.SpreadShot:
                 CancelFastShoot();
                 currentShootingStyle = 2;
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("TRIPLE SHOT"));
                 break;
             case PowerupType.BurstShot:
                 CancelFastShoot();
                 currentShootingStyle = 3;
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("BURST SHOT"));
                 break;
             case PowerupType.FastShoot:
                 if (fastShootCoroutine != null)
                     StopCoroutine(fastShootCoroutine);
                 fastShootCoroutine = StartCoroutine(FastShootTimer());
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("FAST SHOOT"));
                 break;
             case PowerupType.HomingShot:
                 if (homingCoroutine != null)
                     StopCoroutine(homingCoroutine);
                 homingCoroutine = StartCoroutine(HomingTimer());
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("HOMING SHOT"));
                 break;
             case PowerupType.SpeedBoost:
                 if (speedBoostCoroutine != null)
                     StopCoroutine(speedBoostCoroutine);
                 speedBoostCoroutine = StartCoroutine(SpeedBoostTimer());
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("SPEED BOOST"));
                 break;
             case PowerupType.ReverseShot:
                 if (reverseShotCoroutine != null)
                     StopCoroutine(reverseShotCoroutine);
                 reverseShotCoroutine = StartCoroutine(ReverseShotTimer());
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("REVERSE SHOT"));
                 break;
             case PowerupType.Shield:
                 if (shieldCoroutine != null)
                     StopCoroutine(shieldCoroutine);
                 shieldCoroutine = StartCoroutine(ShieldTimer());
+                showPowerupTextCoroutine = StartCoroutine(ShowPowerupText("SHIELD"));
                 break;
         }
     }
@@ -198,11 +215,13 @@ public class Player : MonoBehaviour {
     }
 
     private IEnumerator SpeedBoostTimer() {
+        float originalAcceleration = shipAcceleration;
+        float originalMaxVelocity = shipMaxVelocity;
         shipAcceleration = boostedAcceleration;
         shipMaxVelocity = boostedMaxVelocity;
         yield return new WaitForSeconds(speedBoostDuration);
-        shipAcceleration = 2f;
-        shipMaxVelocity = 2f;
+        shipAcceleration = originalAcceleration;
+        shipMaxVelocity = originalMaxVelocity;
         speedBoostCoroutine = null;
     }
 
@@ -211,6 +230,23 @@ public class Player : MonoBehaviour {
         yield return new WaitForSeconds(reverseShotDuration);
         isReverseShot = false;
         reverseShotCoroutine = null;
+    }
+
+    private IEnumerator ShieldTimer() {
+        isShielded = true;
+        isInvincible = true;
+        float elapsed = 0f;
+        while (elapsed < shieldDuration) {
+            spriteRenderer.color = Color.cyan;
+            yield return new WaitForSeconds(0.15f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.15f);
+            elapsed += 0.3f;
+        }
+        spriteRenderer.color = Color.white;
+        isShielded = false;
+        isInvincible = false;
+        shieldCoroutine = null;
     }
 
     private void ShootSingle() {
@@ -228,22 +264,6 @@ public class Player : MonoBehaviour {
             FireBullet(transform.up);
             yield return new WaitForSeconds(0.05f);
         }
-    }
-    private IEnumerator ShieldTimer() {
-        isShielded = true;
-        isInvincible = true;
-        float elapsed = 0f;
-        while (elapsed < shieldDuration) {
-            spriteRenderer.color = Color.cyan;
-            yield return new WaitForSeconds(0.15f);
-            spriteRenderer.color = Color.white;
-            yield return new WaitForSeconds(0.15f);
-            elapsed += 0.3f;
-        }
-        spriteRenderer.color = Color.white;
-        isShielded = false;
-        isInvincible = false;
-        shieldCoroutine = null;
     }
 
     private void FireBullet(Vector2 direction) {
@@ -266,7 +286,40 @@ public class Player : MonoBehaviour {
                 reverseBullet.AddForce(bulletSpeed * -direction.normalized, ForceMode2D.Impulse);
             }
         }
-}
+    }
+
+    private IEnumerator ShowPowerupText(string message) {
+        if (powerupText == null) yield break;
+        if (GameManager.Instance != null && GameManager.Instance.isTransitioning) yield break;
+        
+        powerupText.text = message;
+        powerupText.gameObject.SetActive(true);
+        powerupText.color = Color.white;
+
+        yield return new WaitForSeconds(1.5f);
+
+        float fadeDuration = 1f;
+        float elapsed = 0f;
+        Color startColor = powerupText.color;
+        while (elapsed < fadeDuration) {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
+            powerupText.color = new Color(startColor.r, startColor.g, startColor.b, alpha);
+            yield return null;
+        }
+
+        powerupText.gameObject.SetActive(false);
+        showPowerupTextCoroutine = null;
+    }
+
+    public void HidePowerupText() {
+        if (showPowerupTextCoroutine != null) {
+            StopCoroutine(showPowerupTextCoroutine);
+            showPowerupTextCoroutine = null;
+        }
+        if (powerupText != null)
+            powerupText.gameObject.SetActive(false);
+    }
 
     private Vector2 Rotate2D(Vector2 vector, float degrees) {
         float radians = degrees * Mathf.Deg2Rad;

@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Boss bossPrefab;
   [SerializeField] private Powerup powerupPrefab;
   [SerializeField] private float powerupSpawnInterval = 10f;
+  [SerializeField] private TextMeshProUGUI powerupText;
 
 
   public int asteroidCount = 0;
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour {
 
   // Pause state
   public bool isPaused;
-  private bool isTransitioning = false;
+  public bool isTransitioning = false;
 
   // UI stuff
   [SerializeField] private GameObject pauseMenuUI;
@@ -59,6 +60,11 @@ public class GameManager : MonoBehaviour {
     highScore = PlayerPrefs.GetInt("HighScore", 0);
     UpdateLivesUI();
     StartCoroutine(PowerupSpawnLoop());
+
+    // Assign powerup text to the initial player
+    Player initialPlayer = FindAnyObjectByType<Player>();
+    if (initialPlayer != null)
+        initialPlayer.SetPowerupText(powerupText);
   }
 
   // Main game loop
@@ -82,7 +88,6 @@ public class GameManager : MonoBehaviour {
             lifeIcons[i].SetActive(i < currentLives);
     }
 }
-
   // Called by Player when it is destroyed. Deducts a life and either respawns or ends the game.
   public void OnPlayerDied() {
     currentLives--;
@@ -98,12 +103,18 @@ public class GameManager : MonoBehaviour {
   // Spawns a fresh player immediately — the flashing on the Player itself signals invincibility.
   private void RespawnPlayer() {
     Vector3 spawnPos = playerSpawnPoint != null ? playerSpawnPoint.position : Vector3.zero;
-    Instantiate(playerPrefab, spawnPos, Quaternion.identity);
+    Player newPlayer = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
+    newPlayer.SetPowerupText(powerupText);
   }
 
   // Level transition
   private IEnumerator LevelTransition() {
     isTransitioning = true;
+
+    // Hide powerup text if it's showing
+    Player currentPlayer = FindAnyObjectByType<Player>();
+    if (currentPlayer != null)
+        currentPlayer.HidePowerupText();  
 
     levelText.text = "Level " + level;
 
@@ -121,6 +132,10 @@ public class GameManager : MonoBehaviour {
 
       levelCompleteText.gameObject.SetActive(false);
     }
+     // Hide again after countdown in case a powerup was picked up during it
+    currentPlayer = FindAnyObjectByType<Player>();
+    if (currentPlayer != null)
+        currentPlayer.HidePowerupText();
 
     if (isBossLevel) {
       SpawnBoss();
