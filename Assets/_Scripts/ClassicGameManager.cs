@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class ClassicGameManager : MonoBehaviour {
 
@@ -68,8 +69,11 @@ public class ClassicGameManager : MonoBehaviour {
     public void UpdateLivesUI() {
         if (lifeIcons == null) return;
         for (int i = 0; i < lifeIcons.Length; i++) {
-            if (lifeIcons[i] != null)
-                lifeIcons[i].SetActive(i < currentLives);
+            if (lifeIcons[i] != null) {
+                Image icon = lifeIcons[i].GetComponent<Image>();
+                if (icon != null)
+                    icon.color = i < currentLives ? Color.white : Color.gray;
+            }
         }
     }
 
