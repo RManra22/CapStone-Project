@@ -9,14 +9,16 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private AudioSource audioSource;
 
+
     private Vector2 driftDirection;
-    private PowerupType powerupType;
+    [SerializeField] private PowerupType powerupType;
     private Camera mainCamera;
 
     private void Start() {
         mainCamera = Camera.main;
 
-        powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
+        // powerupType = (PowerupType)Random.Range(0, System.Enum.GetValues(typeof(PowerupType)).Length);
+        powerupType = PowerupType.HomingShot;   
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null) {
