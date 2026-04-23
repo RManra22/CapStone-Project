@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour {
   }
 
   private void Start() {
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
     highScore = PlayerPrefs.GetInt("HighScore", 0);
     UpdateLivesUI();
     StartCoroutine(PowerupSpawnLoop());
@@ -215,6 +217,8 @@ public class GameManager : MonoBehaviour {
   }
 
   public void GameOver() {
+    Cursor.lockState = CursorLockMode.None;
+    Cursor.visible = true;
     if (currentScore > PlayerPrefs.GetInt("HighScore", 0)) {
         PlayerPrefs.SetInt("HighScore", currentScore);
         PlayerPrefs.Save();

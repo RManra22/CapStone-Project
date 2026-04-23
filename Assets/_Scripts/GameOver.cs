@@ -7,6 +7,8 @@ public class GameOverScreen : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI highScoreText;
 
     private void Start() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         int finalScore = PlayerPrefs.GetInt("LastScore", 0);
         string highScoreKey = PlayerPrefs.GetString("LastHighScoreKey", "HighScore");
         int highScore = PlayerPrefs.GetInt(highScoreKey, 0);

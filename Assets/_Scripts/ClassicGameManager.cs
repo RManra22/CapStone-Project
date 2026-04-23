@@ -49,6 +49,8 @@ public class ClassicGameManager : MonoBehaviour {
     }
 
     private void Start() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         highScore = PlayerPrefs.GetInt("ClassicHighScore", 0);
         UpdateLivesUI();
         UpdateScoreUI();
@@ -153,6 +155,8 @@ public class ClassicGameManager : MonoBehaviour {
     }
 
     public void GameOver() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         if (currentScore > PlayerPrefs.GetInt("ClassicHighScore", 0)) {
             PlayerPrefs.SetInt("ClassicHighScore", currentScore);
             PlayerPrefs.Save();
