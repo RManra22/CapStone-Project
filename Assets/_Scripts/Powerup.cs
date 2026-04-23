@@ -1,5 +1,9 @@
+/*
+    This script is responsible for controlling 
+    the behavior of powerup objects in the game
+    as per the requirements. 
+*/
 using UnityEngine;
-
 public class Powerup : MonoBehaviour {
     [Header("Movement")]
     [SerializeField] private float driftSpeed = 1.5f;

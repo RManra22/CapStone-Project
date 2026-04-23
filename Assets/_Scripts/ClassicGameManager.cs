@@ -1,3 +1,6 @@
+/*
+    This script is responsible for managing the core gameplay loop of the classic Asteroids mode.
+*/
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;

@@ -1,3 +1,7 @@
+/*
+    This script is resonsible for the 
+    keybind UI as per the requirments. 
+*/
 using System;
 using System.Collections.Generic;
 using UnityEngine.Events;

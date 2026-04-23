@@ -1,3 +1,7 @@
+/*
+    This script is is apart of the boss
+    whichs was mentioned in the rquirments.
+*/
 using UnityEngine;
 
 public class BossBullet : MonoBehaviour {

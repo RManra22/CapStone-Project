@@ -1,3 +1,9 @@
+/*
+    This script is apart of the 
+    power ups that were 
+    mentioned in the requirments.
+*/
+
 using UnityEngine;
 
 public class HealthPack : MonoBehaviour {

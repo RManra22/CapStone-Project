@@ -1,3 +1,11 @@
+/*
+    This script is responsible for controlling 
+    the player's ship, including movement, shooting,
+    powerup effects, and handling death. It also manages
+    the player's invincibility after respawning and displays
+    powerup text when a new powerup is picked up.
+*/
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;

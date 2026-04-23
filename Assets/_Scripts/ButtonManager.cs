@@ -1,3 +1,11 @@
+/*
+    This script is responsible for allowing the
+    player to navigate the menus as per the functional requirements.
+    
+    This script is also responsible for allowing the
+    player to exit the game as per the functional requirements.
+*/
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -5,7 +13,6 @@ public class ButtonManager : MonoBehaviour
 {
 
     public GameObject loadingUI; // Reference to the loading UI GameObject
-    // This script is responsible for allowing the player to navigate the menus as per the functional requirements. 
     public void LoadScene(string sceneName) // load the correct scene based on the name given
     {
         Time.timeScale = 1f; // Ensure time is running at normal speed when loading a new scene

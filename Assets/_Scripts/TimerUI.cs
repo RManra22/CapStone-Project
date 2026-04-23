@@ -1,3 +1,8 @@
+/*
+    This script is resonsible for showing 
+    important information to the player 
+    as per the requirements. 
+*/
 using UnityEngine;
 using TMPro;
 

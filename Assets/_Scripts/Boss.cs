@@ -1,3 +1,8 @@
+/*
+    This script is responsible for controlling 
+    the behavior of the boss enemy in the game as
+    per the requirements.
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

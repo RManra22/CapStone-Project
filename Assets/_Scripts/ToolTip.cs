@@ -1,3 +1,7 @@
+/*
+    This script is apart of allowing the player 
+    to naviate the UI and understand what each button does.
+*/
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;

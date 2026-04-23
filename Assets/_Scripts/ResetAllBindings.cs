@@ -1,3 +1,7 @@
+/*
+    This script is responsible for helping with keybind 
+    customization as per the requirments.
+*/
 using UnityEngine;
 using UnityEngine.InputSystem;
 

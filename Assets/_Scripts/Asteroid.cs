@@ -1,3 +1,8 @@
+/*
+    This script is responsible for controlling 
+    the behavior of asteroids in the game as
+    per the requirements.
+*/
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour {

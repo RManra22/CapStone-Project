@@ -1,3 +1,7 @@
+/*
+    This script is responsible for the game over screen, 
+    as per the requriments. 
+*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;

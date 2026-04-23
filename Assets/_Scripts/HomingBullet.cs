@@ -1,3 +1,7 @@
+/*
+    This is part of the power ups 
+    metioned in the requirments. 
+*/
 using UnityEngine;
 
 public class HomingBullet : MonoBehaviour {

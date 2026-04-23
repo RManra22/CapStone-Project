@@ -1,3 +1,6 @@
+/*
+    This script is responsible for managing the core gameplay loop. 
+*/
 using System.Collections;
 using UnityEditor;
 using UnityEngine;

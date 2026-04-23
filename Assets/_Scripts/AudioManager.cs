@@ -1,5 +1,6 @@
 /*
-    This script was provided to us by Professor Eric May.
+    This script is responsible for managing audio playback in 
+    the game and saving settings as per the functional requirements.
 */
 using UnityEngine;
 using UnityEngine.Audio;

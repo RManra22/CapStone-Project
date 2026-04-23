@@ -1,3 +1,9 @@
+/*
+    This script is responsible 
+    for managing the settings menu, 
+    including loading and saving settings, 
+    and applying them to the audio mixer.
+*/
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Audio;

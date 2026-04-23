@@ -1,3 +1,8 @@
+/*
+    This script is apart of the player shooting the 
+    asteroids mentioned in the requirments.
+*/
+
 using UnityEngine;
 
 // This script is responsible for the behaviour of the bullets in the game.
