@@ -42,12 +42,15 @@ public class ClassicGameManager : MonoBehaviour {
     [SerializeField] private int mediumAsteroidPoints = 50;
     [SerializeField] private int smallAsteroidPoints = 100;
 
+
+    // Singleton pattern for easy access from other scripts
     void Awake() {
         Instance = this;
         Time.timeScale = 1f;
         currentLives = maxLives;
     }
 
+    // Initialize game state, lock cursor, load high score, update UI, and start countdown
     private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -57,6 +60,7 @@ public class ClassicGameManager : MonoBehaviour {
         StartCoroutine(StartCountdown());
     }
 
+    // Countdown before the game starts, showing a message and then spawning initial asteroids
     private IEnumerator StartCountdown() {
         countdownText.gameObject.SetActive(true);
 
@@ -74,6 +78,7 @@ public class ClassicGameManager : MonoBehaviour {
         }
     }
 
+    // Update is called once per frame, spawns asteroids if below threshold, and checks for pause input
     private void Update() {
         if (!gameStarted) return;
 
@@ -87,6 +92,7 @@ public class ClassicGameManager : MonoBehaviour {
         }
     }
 
+    // Update the lives UI by enabling/disabling icons based on current lives
     public void UpdateLivesUI() {
         if (lifeIcons == null) return;
         for (int i = 0; i < lifeIcons.Length; i++) {
@@ -98,11 +104,13 @@ public class ClassicGameManager : MonoBehaviour {
         }
     }
 
+    // Update the score and high score UI elements
     private void UpdateScoreUI() {
         if (scoreText != null) scoreText.text = "Score: " + currentScore;
         if (highScoreText != null) highScoreText.text = "Best: " + highScore;
     }
 
+    // Handle player death: decrement lives, update UI, check for game over or respawn
     public void OnPlayerDied() {
         currentLives--;
         UpdateLivesUI();
@@ -114,11 +122,13 @@ public class ClassicGameManager : MonoBehaviour {
         }
     }
 
+    // Respawn the player at the spawn point with default settings
     private void RespawnPlayer() {
         Vector3 spawnPos = playerSpawnPoint != null ? playerSpawnPoint.position : Vector3.zero;
         Instantiate(playerPrefab, spawnPos, Quaternion.identity);
     }
 
+    // Spawn an asteroid at a random edge position with random movement, and register it with the manager
     private void SpawnAsteroid() {
         Vector2 spawnPos = GetRandomEdgePosition();
         Asteroid asteroid = Instantiate(asteroidPrefab, spawnPos, Quaternion.identity);
@@ -126,6 +136,7 @@ public class ClassicGameManager : MonoBehaviour {
         asteroid.classicGameManager = this;
     }
 
+    // Get a random position along the edges of the screen for asteroid spawning
     private Vector2 GetRandomEdgePosition() {
         float offset = Random.Range(0f, 1f);
         Vector2 viewportPos;
@@ -136,7 +147,8 @@ public class ClassicGameManager : MonoBehaviour {
         else                viewportPos = new Vector2(1, offset);
         return Camera.main.ViewportToWorldPoint(viewportPos);
     }
-
+    
+    // Add score based on asteroid size, update high score if needed, and refresh UI
     public void AddScore(int asteroidSize) {
         int points = 0;
         if (asteroidSize == 3)      points = largeAsteroidPoints;
@@ -154,6 +166,7 @@ public class ClassicGameManager : MonoBehaviour {
         UpdateScoreUI();
     }
 
+    // Handle game over: unlock cursor, save score and high score, and transition to Game Over screen after a delay
     public void GameOver() {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

@@ -14,6 +14,7 @@ public class Powerup : MonoBehaviour {
     [SerializeField] private PowerupType powerupType;
     private Camera mainCamera;
 
+    // On start, randomly assign a powerup type and color, set a random drift direction, and destroy after lifetime expires
     private void Start() {
         mainCamera = Camera.main;
 
@@ -36,6 +37,7 @@ public class Powerup : MonoBehaviour {
         Destroy(gameObject, lifetime);
     }
 
+    // Moves in a drifting pattern and wraps around screen edges
     private void Update() {
         if (mainCamera == null) return;
 
@@ -51,6 +53,7 @@ public class Powerup : MonoBehaviour {
             transform.position = mainCamera.ViewportToWorldPoint(vp);
     }
 
+    // When player collides with the powerup, apply the effect, play sound, and destroy the powerup
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             Player player = collision.GetComponent<Player>();

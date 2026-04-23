@@ -6,6 +6,7 @@ public class GameOverScreen : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI finalScoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
 
+    // On start, unlock the cursor and display the final score and high score retrieved from PlayerPrefs
     private void Start() {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

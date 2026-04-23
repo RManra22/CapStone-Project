@@ -67,6 +67,7 @@ public class Player : MonoBehaviour {
         powerupText = text;
     }
 
+    // On start, get necessary components, set initial shooting style, and start respawn invincibility
     private void Start() {
         shipRigidbody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
@@ -75,6 +76,7 @@ public class Player : MonoBehaviour {
         StartCoroutine(RespawnInvincibility());
     }
 
+    // Coroutine that makes the player invincible for a short duration after respawning, with flashing effect
     private IEnumerator RespawnInvincibility() {
         isInvincible = true;
         float elapsed = 0f;
@@ -89,6 +91,7 @@ public class Player : MonoBehaviour {
             isInvincible = false;
     }
 
+    // In Update, handle player input for movement and shooting, but only if alive
     private void Update() {
         if (isAlive) {
             HandleShipAcceleration();
@@ -97,6 +100,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    // In FixedUpdate, apply acceleration force if the player is accelerating, and clamp velocity to max speed
     private void FixedUpdate() {
         if (isAlive && isAccelerating) {
             shipRigidbody.AddForce(shipAcceleration * transform.up);
@@ -104,10 +108,12 @@ public class Player : MonoBehaviour {
         }
     }
 
+    // Handle input for accelerating forward, and set isAccelerating flag accordingly
     private void HandleShipAcceleration() {
         isAccelerating = playerInput.actions["Accel"].ReadValue<Vector2>().y > 0;
     }
 
+    // Handle input for turning left and right, and rotate the ship accordingly
     private void HandleShipRotation() {
         if (playerInput.actions["TurnLeft"].ReadValue<Vector2>().x < 0)
             transform.Rotate(shipRotationSpeed * Time.deltaTime * transform.forward);
@@ -115,6 +121,7 @@ public class Player : MonoBehaviour {
             transform.Rotate(-shipRotationSpeed * Time.deltaTime * transform.forward);
     }
 
+    // Handle input for shooting, check fire rate cooldown, and fire bullets based on current shooting style
     private void HandleShooting() {
         if (!playerInput.actions["Shoot"].triggered || Time.time < nextFireTime)
             return;
@@ -141,6 +148,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    //  Apply a powerup effect based on the type, which starts the corresponding coroutine and shows powerup text
     public void ApplyPowerup(PowerupType type) {
         // Stop any existing powerup text coroutine
         if (showPowerupTextCoroutine != null) {
@@ -192,6 +200,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    // Cancel the fast shoot effect
     private void CancelFastShoot() {
         if (fastShootCoroutine != null) {
             StopCoroutine(fastShootCoroutine);
@@ -200,6 +209,7 @@ public class Player : MonoBehaviour {
         baseFireRateMultiplier = 1f;
     }
 
+    // Coroutine for the fast shoot powerup effect, which temporarily reduces the fire rate multiplier
     private IEnumerator FastShootTimer() {
         baseFireRateMultiplier = fastShootMultiplier;
         yield return new WaitForSeconds(fastShootDuration);
@@ -207,6 +217,7 @@ public class Player : MonoBehaviour {
         fastShootCoroutine = null;
     }
 
+    // Coroutine for the homing shot powerup effect, which sets isHoming to true for a duration
     private IEnumerator HomingTimer() {
         isHoming = true;
         yield return new WaitForSeconds(homingDuration);
@@ -214,6 +225,7 @@ public class Player : MonoBehaviour {
         homingCoroutine = null;
     }
 
+    // Coroutine for the speed boost powerup effect, which temporarily increases acceleration and max velocity
     private IEnumerator SpeedBoostTimer() {
         float originalAcceleration = shipAcceleration;
         float originalMaxVelocity = shipMaxVelocity;
@@ -225,6 +237,7 @@ public class Player : MonoBehaviour {
         speedBoostCoroutine = null;
     }
 
+    // Coroutine for the reverse shot powerup effect, which sets isReverseShot to true for a duration
     private IEnumerator ReverseShotTimer() {
         isReverseShot = true;
         yield return new WaitForSeconds(reverseShotDuration);
@@ -232,6 +245,7 @@ public class Player : MonoBehaviour {
         reverseShotCoroutine = null;
     }
 
+    // Coroutine for the shield powerup effect, which makes the player invincible and changes color for a duration
     private IEnumerator ShieldTimer() {
         isShielded = true;
         isInvincible = true;
@@ -266,6 +280,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    // Helper method to fire a bullet in a given direction, using homing bullets if the homing powerup is active, and also firing reverse bullets if that powerup is active
     private void FireBullet(Vector2 direction) {
         if (isHoming && homingBulletPrefab != null) {
             Rigidbody2D bullet = Instantiate(homingBulletPrefab, bulletSpawn.position, Quaternion.identity);
@@ -288,6 +303,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    // Helper method to rotate a 2D vector by a certain number of degrees
     private IEnumerator ShowPowerupText(string message) {
         if (powerupText == null) yield break;
         if (GameManager.Instance != null && GameManager.Instance.isTransitioning) yield break;
@@ -312,6 +328,7 @@ public class Player : MonoBehaviour {
         showPowerupTextCoroutine = null;
     }
 
+    // Hides the powerup text immediately, used during level transitions or when a new powerup is picked up
     public void HidePowerupText() {
         if (showPowerupTextCoroutine != null) {
             StopCoroutine(showPowerupTextCoroutine);
@@ -331,6 +348,7 @@ public class Player : MonoBehaviour {
         );
     }
 
+    // When player collides with an asteroid, boss bullet, or boss, handle death if not invincible or shielded
     private void OnTriggerEnter2D(Collider2D collision) {
         if (!isAlive || isInvincible) return;
         if (collision.CompareTag("Asteroid") || collision.CompareTag("BossBullet") || collision.CompareTag("Boss")) {

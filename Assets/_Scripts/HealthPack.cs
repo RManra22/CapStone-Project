@@ -14,11 +14,13 @@ public class HealthPack : MonoBehaviour {
 
     private Vector2 driftDirection;
 
+    // Spawns with random drift direction and destroys itself after a set lifetime
     private void Start() {
         driftDirection = Random.insideUnitCircle.normalized;
         Destroy(gameObject, lifetime);
     }
 
+    // Moves in a drifting pattern with bobbing effect, and wraps around screen edges
     private void Update() {
         transform.position += (Vector3)(driftDirection * driftSpeed * Time.deltaTime);
 

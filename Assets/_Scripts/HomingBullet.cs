@@ -7,11 +7,13 @@ public class HomingBullet : MonoBehaviour {
     private Transform target;
     private Rigidbody2D rb;
 
+    // On start, get Rigidbody2D component and find initial target
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         FindTarget();
     }
 
+    // In FixedUpdate, adjust velocity to home in on target and rotate sprite to face direction of travel
     private void FixedUpdate() {
         if (target == null) {
             FindTarget(); // re-acquire if target was destroyed
@@ -27,11 +29,13 @@ public class HomingBullet : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
+    // Finds the nearest asteroid or boss within a certain radius and sets it as the target
     private void FindTarget() {
-        // Find nearest asteroid or boss
+   
         float nearestDist = Mathf.Infinity;
         Transform nearest = null;
-
+        
+        // Check all colliders within a radius for asteroids or bosses, and find the closest one
         foreach (var col in Physics2D.OverlapCircleAll(transform.position, 20f)) {
             if (col.CompareTag("Asteroid") || col.CompareTag("Boss")) {
                 float dist = Vector2.Distance(transform.position, col.transform.position);
@@ -45,6 +49,7 @@ public class HomingBullet : MonoBehaviour {
         target = nearest;
     }
 
+    // If collides with an asteroid or boss, destroy the bullet immediately 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Asteroid") || collision.CompareTag("Boss")) {
             Destroy(gameObject);

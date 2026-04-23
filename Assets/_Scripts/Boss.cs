@@ -6,10 +6,10 @@ using UnityEngine;
 public class Boss : MonoBehaviour {
 
   [Header("References")]
-  [SerializeField] private Rigidbody2D bulletPrefab;       // Reuse the same bullet prefab as the player
-  [SerializeField] private Transform bulletSpawn;           // Empty child object at the front of the boss
+  [SerializeField] private Rigidbody2D bulletPrefab;
+  [SerializeField] private Transform bulletSpawn;
   [SerializeField] private ParticleSystem destroyedParticles;
-  [SerializeField] private Asteroid asteroidPrefab;         // For the asteroid-spawn attack
+  [SerializeField] private Asteroid asteroidPrefab;
   [SerializeField] private HealthPack healthPackPrefab;
 
   [Header("Health")]
@@ -17,9 +17,9 @@ public class Boss : MonoBehaviour {
   private int currentHealth;
 
   [Header("Movement")]
-  [SerializeField] private float driftSpeed = 1.5f;         // Phase 1 drift speed
-  [SerializeField] private float chaseSpeed = 3.5f;         // Phase 2 chase force
-  [SerializeField] private float enragedSpeed = 5.5f;       // Phase 3 chase force
+  [SerializeField] private float driftSpeed = 1.5f;
+  [SerializeField] private float chaseSpeed = 3.5f;
+  [SerializeField] private float enragedSpeed = 5.5f;
   [SerializeField] private float maxVelocity = 5f;
   [SerializeField] private float rotationSpeed = 90f;
 
@@ -33,7 +33,7 @@ public class Boss : MonoBehaviour {
   [SerializeField] private float asteroidSpawnInterval = 6f;
   [SerializeField] private int asteroidsToSpawn = 2;
 
-    [Header("Sound Effects")]
+  [Header("Sound Effects")]
 
   [SerializeField] private AudioClip hitSound;
   [SerializeField] private AudioClip deathSound;
@@ -57,7 +57,7 @@ public class Boss : MonoBehaviour {
 
 
 
-private int tier = 1; // Default to tier 1, will be set by GameManager on spawn
+private int tier = 1;
 public void SetTier(int newTier) {
     tier = Mathf.Clamp(newTier, 1, 3); // Ensure tier is between 1 and 3
     switch (tier) {
@@ -112,7 +112,7 @@ public void SetTier(int newTier) {
   private void Update() {
     if (!isAlive) return;
 
-    // Re-acquire player reference if it was destroyed (e.g. after respawn)
+    // Re-acquire player reference if it was destroyed and has respawned
     if (player == null) {
         Player playerObj = FindAnyObjectByType<Player>();
         if (playerObj != null) player = playerObj.transform;
@@ -121,6 +121,7 @@ public void SetTier(int newTier) {
     HandleAttacks();
   }
 
+  // Handle movement and rotation in FixedUpdate for smoother physics
   private void FixedUpdate() {
     if (!isAlive || player == null) return;
 
@@ -178,6 +179,7 @@ public void SetTier(int newTier) {
     FireBullet(dir);
   }
 
+  // Shoot a spread of bullets in a cone pattern around the player direction
   private void ShootSpread() {
     int bulletCount = 5;
     float angleStep = 20f;
@@ -187,7 +189,7 @@ public void SetTier(int newTier) {
     }
   }
 
-  // Spiral shoot coroutine — fires bullets in a rotating pattern for a few seconds
+  // Shoot coroutine that fires bullets in a rotating pattern around the boss, creating a spiral effect
   private IEnumerator ShootSpiral() {
     spiralRunning = true;
     int totalBullets = 16;
@@ -241,6 +243,7 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
     }
   }
 
+  // Handle taking damage, play hit sound and flash red, and check for death
   private void TakeDamage(int amount) {
     currentHealth -= amount;
     audioSource.clip = hitSound;
@@ -249,6 +252,7 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
     if (currentHealth <= 0) Die();
   }
 
+  // Flash red briefly when hit
   private IEnumerator FlashOnHit() {
     SpriteRenderer sr = GetComponent<SpriteRenderer>();
     if (sr == null) yield break;
@@ -258,6 +262,7 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
     if (sr != null) sr.color = original;
   }
 
+  // Handle death: play sound and particles, spawn health pack, notify game manager, and clean up asteroids
   private void Die() {
     isAlive = false;
     audioSource.clip = deathSound;
@@ -278,6 +283,8 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
     gameManager.asteroidCount--;
     gameManager.OnBossDefeated();
 
+
+   // Award points based on tier and spawn health pack
     int bossPoints = tier == 1 ? 500 : tier == 2 ? 1000 : 1500;
     gameManager.currentScore += bossPoints;
 
@@ -288,6 +295,7 @@ private IEnumerator DespawnAsteroid(Asteroid asteroid, float delay) {
     Destroy(gameObject, deathSound.length);
 }
 
+  // Helper to rotate a vector by degrees
   private Vector2 Rotate2D(Vector2 vector, float degrees) {
     float radians = degrees * Mathf.Deg2Rad;
     float cos = Mathf.Cos(radians);

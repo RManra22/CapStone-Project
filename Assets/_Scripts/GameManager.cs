@@ -6,8 +6,6 @@ using TMPro;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-
-  // Singleton pattern for easy access from other scripts
   public static GameManager Instance { 
     get; 
     private set; 
@@ -51,12 +49,14 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private int mediumAsteroidPoints = 50;
   [SerializeField] private int smallAsteroidPoints = 100;
 
+  // Singleton pattern for easy access from other scripts
   void Awake() {
     Instance = this;
     Time.timeScale = 1f;
     currentLives = maxLives;
   }
 
+  // Initialize game state, lock cursor, load high score, update UI, and start powerup spawn loop
   private void Start() {
     Cursor.lockState = CursorLockMode.Locked;
     Cursor.visible = false;
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour {
         initialPlayer.SetPowerupText(powerupText);
   }
 
-  // Main game loop
+  // Main game loop: check for level completion and handle pause input
   private void Update() {
     if (asteroidCount == 0 && !isTransitioning) {
       level++;
@@ -106,14 +106,14 @@ public class GameManager : MonoBehaviour {
     }
   }
 
-  // Spawns a fresh player immediately — the flashing on the Player itself signals invincibility.
+  // Spawns a fresh player immediately with invulnerability.
   private void RespawnPlayer() {
     Vector3 spawnPos = playerSpawnPoint != null ? playerSpawnPoint.position : Vector3.zero;
     Player newPlayer = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
     newPlayer.SetPowerupText(powerupText);
   }
 
-  // Level transition
+  // Level transition: shows level complete text, does countdown, then spawns new asteroids or boss based on level number
   private IEnumerator LevelTransition() {
     isTransitioning = true;
 
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour {
 
       levelCompleteText.gameObject.SetActive(false);
     }
-     // Hide again after countdown in case a powerup was picked up during it
+     // Hide again after countdown in case a powerup was picked up during level transition
     currentPlayer = FindAnyObjectByType<Player>();
     if (currentPlayer != null)
         currentPlayer.HidePowerupText();
@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour {
     isTransitioning = false;
   }
 
+  // Spawns a boss at a random edge position, with tier based on how many bosses have been defeated so far
   private void SpawnBoss() {
     Vector2 worldSpawnPosition = GetRandomEdgePosition();
     Boss boss = Instantiate(bossPrefab, worldSpawnPosition, Quaternion.identity);
@@ -166,6 +167,7 @@ public class GameManager : MonoBehaviour {
     bossesDefeated++;
   }
 
+  // Spawns a regular asteroid at a random edge position and registers it with the manager
   private void SpawnAsteroid() {
     Vector2 worldSpawnPosition = GetRandomEdgePosition();
     Asteroid asteroid = Instantiate(asteroidPrefab, worldSpawnPosition, Quaternion.identity);
@@ -179,7 +181,8 @@ public class GameManager : MonoBehaviour {
       SpawnPowerup();
     }
   }
-
+    
+  // Spawns a powerup at a random position within the visible play area
   private void SpawnPowerup() {
     if (powerupPrefab == null) return;
 
@@ -189,6 +192,7 @@ public class GameManager : MonoBehaviour {
     Instantiate(powerupPrefab, worldPos, Quaternion.identity);
   }
 
+  // Get a random position along the edges of the screen for asteroid spawning
   private Vector2 GetRandomEdgePosition() {
     float offset = Random.Range(0f, 1f);
     Vector2 viewportPos;
@@ -216,6 +220,7 @@ public class GameManager : MonoBehaviour {
     }
   }
 
+  // Handle game over: unlock cursor, save score and high score, and transition to Game Over screen after a delay
   public void GameOver() {
     Cursor.lockState = CursorLockMode.None;
     Cursor.visible = true;
