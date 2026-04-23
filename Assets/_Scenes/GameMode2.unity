@@ -539,7 +539,6 @@ GameObject:
   - component: {fileID: 107718901}
   - component: {fileID: 107718900}
   - component: {fileID: 107718899}
-  - component: {fileID: 107718898}
   - component: {fileID: 107718897}
   m_Layer: 5
   m_Name: InGameUI
@@ -560,7 +559,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 528511633}
   - {fileID: 332842998}
   - {fileID: 1735242161}
   - {fileID: 1759584882}
@@ -585,20 +583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1284909816}
---- !u!114 &107718898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107718895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d0a47e81cec04a8dba9b4d24b381638, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1112829499}
-  highScoreText: {fileID: 2042401479}
 --- !u!114 &107718899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,11 +815,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 107718896}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &561107252
@@ -2133,8 +2117,8 @@ MonoBehaviour:
   - {fileID: 2124475128}
   - {fileID: 1130244178}
   - {fileID: 679710200}
-  scoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
+  scoreText: {fileID: 1112829499}
+  highScoreText: {fileID: 2042401479}
   countdownText: {fileID: 93293316}
   largeAsteroidPoints: 20
   mediumAsteroidPoints: 50
@@ -3226,6 +3210,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1250331164}
   - {fileID: 2144539426}
+  - {fileID: 528511633}
   - {fileID: 107718896}
   - {fileID: 1568574934}
   - {fileID: 561107256}

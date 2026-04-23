@@ -10,7 +10,7 @@ public class ClassicGameManager : MonoBehaviour {
     public static ClassicGameManager Instance { get; private set; }
 
     [SerializeField] private Asteroid asteroidPrefab;
-    [SerializeField] private int asteroidsOnScreen = 5;
+    [SerializeField] private int asteroidsOnScreen = 4;
 
     public int asteroidCount = 0;
 
