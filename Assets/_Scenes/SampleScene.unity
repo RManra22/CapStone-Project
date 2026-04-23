@@ -1020,17 +1020,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599410646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1985516425}
+  m_Father: {fileID: 856540608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -127, y: -24.886}
-  m_SizeDelta: {x: -1795, y: -1051.264}
+  m_SizeDelta: {x: -1920, y: -1176.264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &599410648
 MonoBehaviour:
@@ -1594,6 +1594,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 681615171}
+  - {fileID: 599410647}
   m_Father: {fileID: 1985516425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1708,6 +1709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipObject: {fileID: 681615170}
+  tooltipObject2: {fileID: 599410646}
 --- !u!1 &868325507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,17 +2260,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479001968}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1985516425}
+  m_Father: {fileID: 1753118993}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.71698, y: -210.18706}
-  m_SizeDelta: {x: -1856.013, y: -1052.046}
+  m_SizeDelta: {x: -1981.013, y: -1177.046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479001970
 MonoBehaviour:
@@ -2573,6 +2575,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2093232867}
+  - {fileID: 1479001969}
   m_Father: {fileID: 1985516425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2687,6 +2690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipObject: {fileID: 2093232866}
+  tooltipObject2: {fileID: 1479001968}
 --- !u!1 &1799467579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,6 +3072,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1205385157}
+  - {fileID: 2049963146}
   m_Father: {fileID: 1985516425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3182,6 +3187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipObject: {fileID: 1205385156}
+  tooltipObject2: {fileID: 2049963145}
 --- !u!1 &1985516419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,9 +3284,6 @@ RectTransform:
   m_Children:
   - {fileID: 1660028425}
   - {fileID: 792141424}
-  - {fileID: 1479001969}
-  - {fileID: 599410647}
-  - {fileID: 2049963146}
   - {fileID: 856540608}
   - {fileID: 1974399032}
   - {fileID: 1753118993}
@@ -3317,17 +3320,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049963145}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1985516425}
+  m_Father: {fileID: 1974399032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 112.828, y: -34.283}
-  m_SizeDelta: {x: -1851.686, y: -1028.634}
+  m_SizeDelta: {x: -1976.686, y: -1153.634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049963147
 MonoBehaviour:

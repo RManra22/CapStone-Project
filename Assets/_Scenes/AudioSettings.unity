@@ -576,6 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipObject: {fileID: 851159250}
+  tooltipObject2: {fileID: 12995081}
 --- !u!114 &518972953
 MonoBehaviour:
   m_ObjectHideFlags: 0

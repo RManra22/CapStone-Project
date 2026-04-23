@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipObject: {fileID: 564527481}
+  tooltipObject2: {fileID: 1356259143}
 --- !u!114 &177609298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,6 +1483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipObject: {fileID: 444618589}
+  tooltipObject2: {fileID: 1454778321}
 --- !u!1 &1012148311
 GameObject:
   m_ObjectHideFlags: 0
