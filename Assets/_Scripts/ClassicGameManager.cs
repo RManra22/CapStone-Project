@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
+
 public class ClassicGameManager : MonoBehaviour {
 
     public static ClassicGameManager Instance { get; private set; }
@@ -26,12 +27,15 @@ public class ClassicGameManager : MonoBehaviour {
     // Pause state
     public bool isPaused;
 
+    private bool gameStarted = false;
+
     // UI
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject inGameUI;
     [SerializeField] private GameObject[] lifeIcons;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
+    [SerializeField] private TextMeshProUGUI countdownText; 
 
     // Points awarded based on asteroid size
     [SerializeField] private int largeAsteroidPoints = 20;
@@ -48,23 +52,38 @@ public class ClassicGameManager : MonoBehaviour {
         highScore = PlayerPrefs.GetInt("ClassicHighScore", 0);
         UpdateLivesUI();
         UpdateScoreUI();
+        StartCoroutine(StartCountdown());
+    }
 
-        // Spawn initial asteroids
+    private IEnumerator StartCountdown() {
+        countdownText.gameObject.SetActive(true);
+
+        for (int i = 3; i > 0; i--) {
+            countdownText.text = "Game starts in " + i + "...";
+            yield return new WaitForSeconds(1f);
+        }
+
+        countdownText.gameObject.SetActive(false);
+        gameStarted = true;
+
+        // Spawn initial asteroids after countdown
         for (int i = 0; i < asteroidsOnScreen; i++) {
             SpawnAsteroid();
         }
     }
 
     private void Update() {
-    if (asteroidCount < asteroidsOnScreen) {
-        SpawnAsteroid();
-    }
+        if (!gameStarted) return;
 
-    if (Input.GetKeyDown(KeyCode.Escape)) {
-        if (isPaused) ResumeGame();
-        else PauseGame();
+        if (asteroidCount < asteroidsOnScreen) {
+            SpawnAsteroid();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (isPaused) ResumeGame();
+            else PauseGame();
+        }
     }
-}
 
     public void UpdateLivesUI() {
         if (lifeIcons == null) return;
