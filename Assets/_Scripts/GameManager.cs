@@ -259,5 +259,11 @@ public class GameManager : MonoBehaviour {
     inGameUI.SetActive(true);
     Cursor.lockState = CursorLockMode.Locked;
     Cursor.visible = false;
+
+    // Hide all tooltips
+        foreach (Tooltip tooltip in pauseMenuUI.GetComponentsInChildren<Tooltip>(true))
+        {
+            tooltip.HideTooltip();
+        }   
   }
 }

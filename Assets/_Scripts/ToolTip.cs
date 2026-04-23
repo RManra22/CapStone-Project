@@ -21,4 +21,10 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         tooltipObject.SetActive(false);
         tooltipObject2.SetActive(false);
     }
+
+    public void HideTooltip()
+    {
+        tooltipObject.SetActive(false);
+        tooltipObject2.SetActive(false);
+    }
 }
